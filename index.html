@@ -126,34 +126,49 @@
             </div>
         </section>
 
-        <section id="keahlian" class="scroll-mt-32">
-            <div class="mb-12 max-w-3xl">
-                <h2 class="text-3xl font-bold text-stone-900 mb-4">🛠️ Toolbox & Keahlian Interaktif</h2>
-                <p class="text-stone-600 text-lg leading-relaxed">
-                    Bagian ini memetakan spektrum keahlian saya. Berinteraksilah dengan tombol kategori di bawah untuk melihat bagaimana distribusi fokus saya antara desain, pemahaman teknis, dan alur kerja manajerial yang direpresentasikan melalui visualisasi data dinamis.
+        <section id="keahlian" class="py-24 bg-stone-50">
+    <div class="max-container px-6">
+        <div class="text-center mb-16">
+            <p class="text-orange-600 font-bold tracking-widest uppercase text-sm mb-3">Spesialisasi</p>
+            <h2 class="text-4xl font-black text-stone-900 tracking-tight">Keahlian Utama</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-100 hover:shadow-md transition-shadow group">
+                <div class="w-12 h-12 bg-stone-900 text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    🎨
+                </div>
+                <h3 class="text-xl font-bold text-stone-900 mb-2">Desain Visual & Estetika</h3>
+                <p class="text-orange-600 font-mono text-xs mb-4">CorelDraw, Canva, Adobe Lightroom, Adobe Photoshop</p>
+                <p class="text-stone-600 text-sm leading-relaxed">
+                    Fokus pada penciptaan identitas visual yang kuat, desain media sosial yang estetik, dan pengolahan foto yang berkarakter.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center glass-panel p-8 md:p-12 rounded-3xl">
-                
-                <div class="space-y-8">
-                    <div class="flex flex-wrap gap-3" id="skill-buttons">
-                        <button onclick="updateSkills('design')" class="skill-btn active px-6 py-3 rounded-xl bg-stone-800 text-white font-medium transition-all shadow-md">🎨 Design</button>
-                        <button onclick="updateSkills('technical')" class="skill-btn px-6 py-3 rounded-xl bg-stone-100 text-stone-600 hover:bg-stone-200 font-medium transition-all">💻 Technical</button>
-                        <button onclick="updateSkills('workflow')" class="skill-btn px-6 py-3 rounded-xl bg-stone-100 text-stone-600 hover:bg-stone-200 font-medium transition-all">🔄 Workflow</button>
-                    </div>
-
-                    <div id="skill-content" class="min-h-[200px] bg-white p-6 rounded-2xl border border-stone-100 shadow-sm transition-opacity duration-300">
-                    </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-100 hover:shadow-md transition-shadow group">
+                <div class="w-12 h-12 bg-stone-900 text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    ⚙️
                 </div>
-
-                <div class="bg-white p-6 rounded-3xl shadow-sm border border-stone-100">
-                    <div class="chart-container">
-                        <canvas id="skillsRadarChart"></canvas>
-                    </div>
-                </div>
+                <h3 class="text-xl font-bold text-stone-900 mb-2">Technical</h3>
+                <p class="text-orange-600 font-mono text-xs mb-4">Video Grafi</p>
+                <p class="text-stone-600 text-sm leading-relaxed">
+                    Implementasi teknologi untuk solusi kreatif, mulai pengoperasian kamera digital maupun analog, pengoperasian gimbal, hingga perangkat Videografi ataupun Fotografi lainnya.
+                </p>
             </div>
-        </section>
+
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-100 hover:shadow-md transition-shadow group">
+                <div class="w-12 h-12 bg-stone-900 text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    🚀
+                </div>
+                <h3 class="text-xl font-bold text-stone-900 mb-2">Marketing & Workflow</h3>
+                <p class="text-orange-600 font-mono text-xs mb-4">Branding dan Digital Marketing</p>
+                <p class="text-stone-600 text-sm leading-relaxed">
+                    Manajemen branding dari awal hingga eksekusi promosi, memastikan setiap pesan sampai ke audiens dengan strategi yang tepat.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
         <section id="karya" class="scroll-mt-32">
             <div class="mb-12 max-w-3xl text-center mx-auto">
@@ -328,140 +343,26 @@
     </footer>
 
     <script>
-    // 1. Data untuk setiap kategori keahlian
-    const skillData = {
-        design: {
-            title: "Desain Visual & Estetika",
-            tools: "Adobe Photoshop, Figma, Sketch", // Sesuaikan dengan tool yang kamu gunakan
-            desc: "Penciptaan antarmuka yang indah dan identitas merek yang kuat.",
-            chartData: [90, 85, 95, 70, 80] // Nilai untuk [UI/UX, Branding, Prototyping, Web Dev, Motion/3D]
-        },
-        technical: {
-            title: "Pengembangan & Implementasi",
-            tools: "HTML5 / CSS3, JavaScript, WebDev Tools",
-            desc: "Menerjemahkan visi desain menjadi produk digital yang fungsional.",
-            chartData: [75, 90, 60, 85, 65]
-        },
-        workflow: {
-            title: "Manajemen & Proses",
-            tools: "Git / GitHub, Agile Methodology",
-            desc: "Memastikan proyek berjalan lancar dari konsepsi hingga peluncuran.",
-            chartData: [85, 60, 75, 90, 85]
-        }
-    };
-
-    // 2. Label untuk sumbu grafik radar
-    const chartLabels = ['UI/UX', 'Branding', 'Prototyping', 'Web Dev', 'Motion/3D'];
-    let radarChartInstance = null;
-
-    // 3. Fungsi untuk mengupdate tampilan teks dan grafik saat tombol diklik
-    function updateSkills(category, event = null) {
-        // A. Update tampilan tombol yang aktif
-        const btns = document.querySelectorAll('.skill-btn');
-        btns.forEach(btn => {
-            btn.classList.remove('bg-stone-800', 'text-white', 'shadow-md');
-            btn.classList.add('bg-stone-100', 'text-stone-600');
-        });
-        
-        // Cek jika dipanggil dari klik tombol atau inisialisasi awal
-        if (event && event.currentTarget) {
-            event.currentTarget.classList.remove('bg-stone-100', 'text-stone-600');
-            event.currentTarget.classList.add('bg-stone-800', 'text-white', 'shadow-md');
-        } else if (category === 'design') {
-            // Aktifkan tombol 'Design' saat halaman baru dimuat
-            document.querySelector('.skill-btn').classList.remove('bg-stone-100', 'text-stone-600');
-            document.querySelector('.skill-btn').classList.add('bg-stone-800', 'text-white', 'shadow-md');
-        }
-
-        // B. Update tampilan teks (Judul, Tool, Deskripsi) dengan animasi pudar
-        const contentDiv = document.getElementById('skill-content');
-        contentDiv.style.opacity = 0;
-        
-        setTimeout(() => {
-            const data = skillData[category];
-            if (data) {
-                contentDiv.innerHTML = `
-                    <h4 class="text-xl font-bold text-stone-900 mb-2">${data.title}</h4>
-                    <p class="text-sm font-semibold text-orange-600 mb-4 font-mono">${data.tools}</p>
-                    <p class="text-stone-600 leading-relaxed">${data.desc}</p>
-                `;
-                contentDiv.style.opacity = 1;
-            }
-
-            // C. Update data grafik radar
-            if (radarChartInstance && data) {
-                radarChartInstance.data.datasets[0].data = data.chartData;
-                radarChartInstance.update();
-            }
-        }, 150);
-    }
-
-    // 4. Inisialisasi Grafik Radar saat halaman dimuat
-    function initCharts() {
-        Chart.defaults.font.family = "'Plus Jakarta Sans', sans-serif";
-        Chart.defaults.color = '#78716C';
-
-        const radarCtx = document.getElementById('skillsRadarChart').getContext('2d');
-        if (!radarCtx) return;
-
-        radarChartInstance = new Chart(radarCtx, {
-            type: 'radar',
-            data: {
-                labels: chartLabels,
-                datasets: [{
-                    label: 'Tingkat Kemampuan',
-                    data: skillData.design.chartData, // Mulai dengan data 'Design'
-                    backgroundColor: 'rgba(234, 88, 12, 0.2)',
-                    borderColor: 'rgba(234, 88, 12, 1)',
-                    pointBackgroundColor: 'rgba(234, 88, 12, 1)',
-                    pointBorderColor: '#fff',
-                    borderWidth: 2,
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    r: {
-                        angleLines: { color: 'rgba(0, 0, 0, 0.05)' },
-                        grid: { color: 'rgba(0, 0, 0, 0.05)' },
-                        pointLabels: {
-                            font: { size: 12, weight: '600' },
-                            color: '#2D2A26'
-                        },
-                        ticks: { display: false, min: 0, max: 100 }
-                    }
-                },
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        backgroundColor: 'rgba(45, 42, 38, 0.9)',
-                        padding: 12,
-                        cornerRadius: 8
-                    }
-                }
-            }
-        });
-    }
-
-    // 5. Jalankan inisialisasi setelah DOM siap
+    // Fungsi sederhana untuk efek Navbar saat di-scroll
     document.addEventListener('DOMContentLoaded', () => {
-        updateSkills('design'); // Panggil updateSkills('design') pertama kali
-        initCharts();
-
         const navbar = document.getElementById('navbar');
+        
         if (navbar) {
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 20) {
-                    navbar.classList.add('shadow-sm', 'py-3');
-                    navbar.classList.remove('py-4');
+                    // Saat di-scroll ke bawah: tambah bayangan dan kurangi padding
+                    navbar.classList.add('shadow-sm', 'py-3', 'bg-white/90', 'backdrop-blur-md');
+                    navbar.classList.remove('py-4', 'bg-white');
                 } else {
-                    navbar.classList.remove('shadow-sm', 'py-3');
-                    navbar.classList.add('py-4');
+                    // Saat kembali ke atas: hapus bayangan dan kembalikan padding
+                    navbar.classList.remove('shadow-sm', 'py-3', 'bg-white/90', 'backdrop-blur-md');
+                    navbar.classList.add('py-4', 'bg-white');
                 }
             });
         }
     });
+
+    // Menghapus fungsi updateSkills dan Chart yang sudah tidak terpakai
 </script>
 </body>
 </html>
