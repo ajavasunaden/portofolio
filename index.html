@@ -129,43 +129,58 @@
         <section id="keahlian" class="py-24 bg-stone-50">
     <div class="max-container px-6">
         <div class="text-center mb-16">
-            <p class="text-orange-600 font-bold tracking-widest uppercase text-sm mb-3">Spesialisasi</p>
-            <h2 class="text-4xl font-black text-stone-900 tracking-tight">Keahlian Utama</h2>
+            <p class="text-orange-600 font-bold tracking-[0.2em] uppercase text-xs mb-3 opacity-80">Expertise</p>
+            <h2 class="text-5xl font-black text-stone-900 tracking-tighter">Bidang Keahlian</h2>
+            <div class="h-1 w-20 bg-orange-500 mx-auto mt-4 rounded-full"></div>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-100 hover:shadow-md transition-shadow group">
-                <div class="w-12 h-12 bg-stone-900 text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    🎨
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            
+            <div onclick="toggleSkill(this)" class="skill-card bg-white p-6 rounded-3xl border border-stone-100 shadow-sm cursor-pointer hover:border-orange-200 transition-all duration-300 group">
+                <div class="text-2xl mb-4 opacity-80 group-hover:scale-110 transition-transform">🎨</div>
+                <h3 class="font-bold text-stone-900 text-lg leading-tight">Graphic Design</h3>
+                <p class="text-[10px] text-orange-600 font-bold mt-2 uppercase tracking-wider">Klik Detail →</p>
+                <div class="skill-desc hidden mt-4 pt-4 border-t border-stone-50">
+                    <p class="text-xs text-stone-600 leading-relaxed">CorelDraw, Canva, Photoshop. Fokus pada identitas visual & konten media sosial estetik.</p>
                 </div>
-                <h3 class="text-xl font-bold text-stone-900 mb-2">Desain Visual & Estetika</h3>
-                <p class="text-orange-600 font-mono text-xs mb-4">CorelDraw, Canva, Adobe Lightroom, Adobe Photoshop</p>
-                <p class="text-stone-600 text-sm leading-relaxed">
-                    Fokus pada penciptaan identitas visual yang kuat, desain media sosial yang estetik, dan pengolahan foto yang berkarakter.
-                </p>
             </div>
 
-            <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-100 hover:shadow-md transition-shadow group">
-                <div class="w-12 h-12 bg-stone-900 text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    ⚙️
+            <div onclick="toggleSkill(this)" class="skill-card bg-white p-6 rounded-3xl border border-stone-100 shadow-sm cursor-pointer hover:border-orange-200 transition-all duration-300 group">
+                <div class="text-2xl mb-4 opacity-80 group-hover:scale-110 transition-transform">📸</div>
+                <h3 class="font-bold text-stone-900 text-lg leading-tight">Fotografi</h3>
+                <p class="text-[10px] text-orange-600 font-bold mt-2 uppercase tracking-wider">Klik Detail →</p>
+                <div class="skill-desc hidden mt-4 pt-4 border-t border-stone-50">
+                    <p class="text-xs text-stone-600 leading-relaxed">Spesialis analog (Mamiya RB67, Canon Autoboy) & digital imaging.</p>
                 </div>
-                <h3 class="text-xl font-bold text-stone-900 mb-2">Technical</h3>
-                <p class="text-orange-600 font-mono text-xs mb-4">Video Grafi</p>
-                <p class="text-stone-600 text-sm leading-relaxed">
-                    Implementasi teknologi untuk solusi kreatif, mulai pengoperasian kamera digital maupun analog, pengoperasian gimbal, hingga perangkat Videografi ataupun Fotografi lainnya.
-                </p>
             </div>
 
-            <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-100 hover:shadow-md transition-shadow group">
-                <div class="w-12 h-12 bg-stone-900 text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    🚀
+            <div onclick="toggleSkill(this)" class="skill-card bg-white p-6 rounded-3xl border border-stone-100 shadow-sm cursor-pointer hover:border-orange-200 transition-all duration-300 group">
+                <div class="text-2xl mb-4 opacity-80 group-hover:scale-110 transition-transform">🎬</div>
+                <h3 class="font-bold text-stone-900 text-lg leading-tight">Videografi</h3>
+                <p class="text-[10px] text-orange-600 font-bold mt-2 uppercase tracking-wider">Klik Detail →</p>
+                <div class="skill-desc hidden mt-4 pt-4 border-t border-stone-50">
+                    <p class="text-xs text-stone-600 leading-relaxed">Pengambilan gambar sinematik & editing video grafis untuk promosi.</p>
                 </div>
-                <h3 class="text-xl font-bold text-stone-900 mb-2">Marketing & Workflow</h3>
-                <p class="text-orange-600 font-mono text-xs mb-4">Branding dan Digital Marketing</p>
-                <p class="text-stone-600 text-sm leading-relaxed">
-                    Manajemen branding dari awal hingga eksekusi promosi, memastikan setiap pesan sampai ke audiens dengan strategi yang tepat.
-                </p>
             </div>
+
+            <div onclick="toggleSkill(this)" class="skill-card bg-white p-6 rounded-3xl border border-stone-100 shadow-sm cursor-pointer hover:border-orange-200 transition-all duration-300 group">
+                <div class="text-2xl mb-4 opacity-80 group-hover:scale-110 transition-transform">⚙️</div>
+                <h3 class="font-bold text-stone-900 text-lg leading-tight">Tools & Hardware</h3>
+                <p class="text-[10px] text-orange-600 font-bold mt-2 uppercase tracking-wider">Klik Detail →</p>
+                <div class="skill-desc hidden mt-4 pt-4 border-t border-stone-50">
+                    <p class="text-xs text-stone-600 leading-relaxed">Pengoperasian Gimbal, Kamera Pro, maintenance lensa, & PC Hardware.</p>
+                </div>
+            </div>
+
+            <div onclick="toggleSkill(this)" class="skill-card bg-white p-6 rounded-3xl border border-stone-100 shadow-sm cursor-pointer hover:border-orange-200 transition-all duration-300 group">
+                <div class="text-2xl mb-4 opacity-80 group-hover:scale-110 transition-transform">📈</div>
+                <h3 class="font-bold text-stone-900 text-lg leading-tight">Marketing & Flow</h3>
+                <p class="text-[10px] text-orange-600 font-bold mt-2 uppercase tracking-wider">Klik Detail →</p>
+                <div class="skill-desc hidden mt-4 pt-4 border-t border-stone-50">
+                    <p class="text-xs text-stone-600 leading-relaxed">Manajemen branding Dapur Astina & strategi promosi digital marketing.</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
@@ -362,7 +377,24 @@
         }
     });
 
-    // Menghapus fungsi updateSkills dan Chart yang sudah tidak terpakai
+    function toggleSkill(element) {
+        const desc = element.querySelector('.skill-desc');
+        const allDescs = document.querySelectorAll('.skill-desc');
+        const allCards = document.querySelectorAll('.skill-card');
+
+        if (desc.classList.contains('hidden')) {
+            // Sembunyikan yang lain agar rapi
+            allDescs.forEach(d => d.classList.add('hidden'));
+            allCards.forEach(c => c.classList.remove('border-orange-500', 'shadow-md'));
+
+            // Tampilkan yang diklik
+            desc.classList.remove('hidden');
+            element.classList.add('border-orange-500', 'shadow-md');
+        } else {
+            desc.classList.add('hidden');
+            element.classList.remove('border-orange-500', 'shadow-md');
+        }
+    }
 </script>
 </body>
 </html>
