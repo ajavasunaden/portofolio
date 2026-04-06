@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Interaktif - Creative Professional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #F9F8F6;
+            color: #2D2A26;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #F3F0EC;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #D1C7BD;
+            border-radius: 20px;
+        }
+    </style>
+    <!-- Chosen Palette: Warm Neutrals (Stone/Sand) with subtle earthy accents for a calm, professional creative vibe. -->
+    <!-- Application Structure Plan: The SPA transforms a linear README into an interactive dashboard. 
+         1. Hero Section: Introduces the persona immediately.
+         2. Interactive Toolbox: Replaces static tables with a dynamic radar chart and clickable categories, allowing users to explore skills actively.
+         3. Project Gallery: Uses an interactive grid rather than a markdown table, enabling deeper focus on individual items.
+         4. Technical Analytics: Transforms static GitHub stat images into interactive Chart.js visualizations, fulfilling the data aspect and making the tech skills tangible.
+         This structure is chosen to encourage active exploration (clicking, hovering) rather than passive reading, fitting for a 'Creative Designer'. -->
+    <!-- Visualization & Content Choices: 
+         - Skills (Toolbox) -> Compare/Organize -> Interactive Radar Chart (Chart.js) + Tabbed Text -> Justification: Shows skill distribution visually rather than a boring list.
+         - GitHub Stats -> Inform/Compare -> Doughnut Chart (Languages) & Bar Chart (Contributions) via Chart.js -> Justification: Replaces raster images with dynamic data exploration.
+         - Projects -> Organize -> CSS Grid Cards -> Justification: Visual hierarchy for portfolio items.
+         - NO SVG/Mermaid used. Unicode used for icons. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="custom-scrollbar antialiased selection:bg-orange-200 selection:text-orange-900">
+
+    <nav class="fixed top-0 w-full z-50 glass-panel border-b border-stone-200 px-6 py-4 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="font-bold text-xl tracking-tight text-stone-800">Portofolio<span class="text-orange-600">.</span></div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-stone-600">
+                <a href="#profil" class="hover:text-orange-600 transition-colors">Profil</a>
+                <a href="#keahlian" class="hover:text-orange-600 transition-colors">Keahlian</a>
+                <a href="#karya" class="hover:text-orange-600 transition-colors">Karya</a>
+                <a href="#statistik" class="hover:text-orange-600 transition-colors">Statistik</a>
+            </div>
+            <a href="#kontak" class="bg-stone-800 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-orange-600 transition-colors">Mari Berkolaborasi</a>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 pt-32 pb-24 space-y-32">
+
+        <section id="profil" class="flex flex-col md:flex-row items-center gap-12 animate-fade-in">
+            <div class="flex-1 space-y-6">
+                <div class="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-orange-800 text-xs font-semibold tracking-wide uppercase">
+                    👋 Halo, Selamat Datang
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight text-stone-900">
+                    Saya <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">[Nama Anda]</span>
+                </h1>
+                <h2 class="text-2xl font-medium text-stone-600">
+                    Creative Designer | Visual Storyteller | Digital Artist
+                </h2>
+                <p class="text-lg text-stone-600 leading-relaxed max-w-2xl">
+                    Saya adalah seorang praktisi kreatif yang berfokus pada penggabungan antara estetika visual dan fungsionalitas digital. Dengan pengalaman di bidang <strong>[Sebutkan Bidang Anda]</strong>, saya membantu brand menceritakan kisah mereka melalui desain yang bermakna.
+                </p>
+                
+                <div class="glass-panel p-6 rounded-2xl border border-stone-200 mt-8 inline-block w-full max-w-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl">🚀</div>
+                        <div>
+                            <h3 class="text-sm font-semibold text-stone-500 uppercase tracking-wider">Sedang Mengerjakan</h3>
+                            <p class="text-lg font-medium text-stone-800 mt-1">[Nama Proyek Saat Ini]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex-1 relative w-full flex justify-center">
+                <div class="w-72 h-72 md:w-96 md:h-96 rounded-full bg-gradient-to-tr from-stone-200 to-stone-100 shadow-inner flex items-center justify-center border-8 border-white overflow-hidden relative">
+                    <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#2D2A26 1px, transparent 1px); background-size: 20px 20px;"></div>
+                    <span class="text-8xl relative z-10">🎨</span>
+                </div>
+                <div class="absolute -bottom-6 -right-6 glass-panel p-4 rounded-2xl animate-bounce" style="animation-duration: 3s;">
+                    <span class="text-2xl">💡</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="keahlian" class="scroll-mt-32">
+            <div class="mb-12 max-w-3xl">
+                <h2 class="text-3xl font-bold text-stone-900 mb-4">🛠️ Toolbox & Keahlian Interaktif</h2>
+                <p class="text-stone-600 text-lg leading-relaxed">
+                    Bagian ini memetakan spektrum keahlian saya. Berinteraksilah dengan tombol kategori di bawah untuk melihat bagaimana distribusi fokus saya antara desain, pemahaman teknis, dan alur kerja manajerial yang direpresentasikan melalui visualisasi data dinamis.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center glass-panel p-8 md:p-12 rounded-3xl">
+                
+                <div class="space-y-8">
+                    <div class="flex flex-wrap gap-3" id="skill-buttons">
+                        <button onclick="updateSkills('design')" class="skill-btn active px-6 py-3 rounded-xl bg-stone-800 text-white font-medium transition-all shadow-md">🎨 Design</button>
+                        <button onclick="updateSkills('technical')" class="skill-btn px-6 py-3 rounded-xl bg-stone-100 text-stone-600 hover:bg-stone-200 font-medium transition-all">💻 Technical</button>
+                        <button onclick="updateSkills('workflow')" class="skill-btn px-6 py-3 rounded-xl bg-stone-100 text-stone-600 hover:bg-stone-200 font-medium transition-all">🔄 Workflow</button>
+                    </div>
+
+                    <div id="skill-content" class="min-h-[200px] bg-white p-6 rounded-2xl border border-stone-100 shadow-sm transition-opacity duration-300">
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-stone-100">
+                    <div class="chart-container">
+                        <canvas id="skillsRadarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="karya" class="scroll-mt-32">
+            <div class="mb-12 max-w-3xl text-center mx-auto">
+                <h2 class="text-3xl font-bold text-stone-900 mb-4">🚀 Showcase Proyek</h2>
+                <p class="text-stone-600 text-lg leading-relaxed">
+                    Jelajahi portofolio visual saya. Galeri ini menampilkan proyek-proyek unggulan yang merepresentasikan gaya desain, kemampuan pemecahan masalah, dan dedikasi saya terhadap kualitas estetika.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="project-card bg-white rounded-3xl overflow-hidden shadow-sm border border-stone-100 cursor-pointer group">
+                    <div class="h-48 bg-stone-200 w-full relative flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-teal-100 to-emerald-100 transition-transform duration-500 group-hover:scale-110"></div>
+                        <span class="text-5xl relative z-10 drop-shadow-md">🌱</span>
+                    </div>
+                    <div class="p-8">
+                        <div class="text-xs font-bold tracking-wider text-teal-600 uppercase mb-2">Mobile UI/UX</div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-3">Eco-Friendly App</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            Aplikasi mobile yang dirancang untuk mendorong kebiasaan ramah lingkungan dengan antarmuka yang bersih dan interaksi pengguna yang intuitif.
+                        </p>
+                        <div class="mt-6 flex gap-2">
+                            <span class="px-3 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Figma</span>
+                            <span class="px-3 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Prototyping</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white rounded-3xl overflow-hidden shadow-sm border border-stone-100 cursor-pointer group">
+                    <div class="h-48 bg-stone-200 w-full relative flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-stone-800 to-stone-600 transition-transform duration-500 group-hover:scale-110"></div>
+                        <span class="text-5xl relative z-10 drop-shadow-md">⬛</span>
+                    </div>
+                    <div class="p-8">
+                        <div class="text-xs font-bold tracking-wider text-stone-500 uppercase mb-2">Identity Design</div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-3">Minimalist Branding</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            Eksplorasi identitas visual untuk brand gaya hidup modern. Berfokus pada tipografi yang kuat dan penggunaan ruang negatif.
+                        </p>
+                        <div class="mt-6 flex gap-2">
+                            <span class="px-3 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Illustrator</span>
+                            <span class="px-3 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Branding</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white rounded-3xl overflow-hidden shadow-sm border border-stone-100 cursor-pointer group">
+                    <div class="h-48 bg-stone-200 w-full relative flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-200 to-pink-200 transition-transform duration-500 group-hover:scale-110"></div>
+                        <span class="text-5xl relative z-10 drop-shadow-md">🤖</span>
+                    </div>
+                    <div class="p-8">
+                        <div class="text-xs font-bold tracking-wider text-purple-600 uppercase mb-2">Digital Art</div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-3">Cyberpunk Series</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            Seri ilustrasi digital yang menggabungkan elemen futuristik dengan palet warna neon yang berani, dieksekusi dengan teknik komposisi tingkat lanjut.
+                        </p>
+                        <div class="mt-6 flex gap-2">
+                            <span class="px-3 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Photoshop</span>
+                            <span class="px-3 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Blender</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="statistik" class="scroll-mt-32">
+            <div class="mb-12 max-w-3xl">
+                <h2 class="text-3xl font-bold text-stone-900 mb-4">📊 Analitik Kontribusi Teknis</h2>
+                <p class="text-stone-600 text-lg leading-relaxed">
+                    Visualisasi ini menerjemahkan statistik kontribusi kode dan distribusi bahasa pemrograman saya. Menggantikan gambar statis, grafik interaktif ini memberikan wawasan yang lebih dalam mengenai kebiasaan pengembangan teknis saya sehari-hari.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="glass-panel p-6 md:p-8 rounded-3xl">
+                    <h3 class="text-xl font-bold text-stone-800 mb-6 flex items-center gap-2">
+                        <span>📈</span> Tren Aktivitas (Simulasi Kontribusi)
+                    </h3>
+                    <div class="chart-container">
+                        <canvas id="activityChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-6 md:p-8 rounded-3xl flex flex-col">
+                    <h3 class="text-xl font-bold text-stone-800 mb-6 flex items-center gap-2">
+                        <span>🔤</span> Distribusi Teknologi Utama
+                    </h3>
+                    <div class="chart-container flex-grow flex items-center justify-center">
+                        <canvas id="languageChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="kontak" class="bg-stone-900 text-stone-400 py-16 border-t border-stone-800">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-white mb-4">📫 Mari Berkolaborasi!</h2>
+                <p class="text-stone-400 text-lg mb-8 max-w-md">
+                    Saya selalu terbuka untuk proyek baru, diskusi desain, atau sekadar berbagi ide kreatif. Jangan ragu untuk menghubungi saya.
+                </p>
+                <div class="flex gap-4">
+                    <a href="mailto:kontak@domain.com" class="px-6 py-3 bg-white text-stone-900 font-medium rounded-full hover:bg-orange-500 hover:text-white transition-colors duration-300">
+                        Kirim Email ✉️
+                    </a>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <a href="#" class="p-6 rounded-2xl bg-stone-800 hover:bg-stone-700 transition-colors border border-stone-700 flex flex-col items-center justify-center text-center group">
+                    <span class="text-3xl mb-3 group-hover:scale-110 transition-transform">📸</span>
+                    <span class="text-white font-medium">Instagram</span>
+                    <span class="text-xs text-stone-500 mt-1">@username_anda</span>
+                </a>
+                <a href="#" class="p-6 rounded-2xl bg-stone-800 hover:bg-stone-700 transition-colors border border-stone-700 flex flex-col items-center justify-center text-center group">
+                    <span class="text-3xl mb-3 group-hover:scale-110 transition-transform">💼</span>
+                    <span class="text-white font-medium">LinkedIn</span>
+                    <span class="text-xs text-stone-500 mt-1">Koneksi Profesional</span>
+                </a>
+                <a href="#" class="p-6 rounded-2xl bg-stone-800 hover:bg-stone-700 transition-colors border border-stone-700 flex flex-col items-center justify-center text-center group col-span-2">
+                    <span class="text-3xl mb-3 group-hover:scale-110 transition-transform">🌐</span>
+                    <span class="text-white font-medium">Website Personal</span>
+                    <span class="text-xs text-stone-500 mt-1">www.portofolioanda.com</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto px-6 mt-16 pt-8 border-t border-stone-800 text-center text-sm">
+            <p>Dibuat dengan ❤️ dan ☕ oleh [Nama Anda]. Dioptimalkan untuk eksplorasi interaktif.</p>
+        </div>
+    </footer>
+
+    <script>
+        const skillData = {
+            design: {
+                title: "Desain Visual & Estetika",
+                tools: "Adobe Photoshop, Figma, Sketch, Ilustrasi Digital",
+                desc: "Fokus utama pada penciptaan antarmuka yang indah, identitas merek yang kuat, dan elemen visual yang memikat audiens.",
+                chartData: [90, 85, 95, 70, 80] 
+            },
+            technical: {
+                title: "Pengembangan & Implementasi",
+                tools: "HTML5 / CSS3, JavaScript (React), Three.js, After Effects",
+                desc: "Menerjemahkan visi desain menjadi produk digital yang fungsional dan interaktif menggunakan teknologi web modern.",
+                chartData: [75, 90, 60, 85, 65]
+            },
+            workflow: {
+                title: "Manajemen & Proses",
+                tools: "Agile / Scrum, Git / GitHub, Notion, Slack",
+                desc: "Memastikan proyek berjalan lancar dari konsepsi hingga peluncuran melalui komunikasi yang jelas dan metodologi yang terstruktur.",
+                chartData: [85, 60, 75, 90, 85]
+            }
+        };
+
+        const chartLabels = ['UI/UX', 'Branding', 'Prototyping', 'Web Dev', 'Motion/3D'];
+        let radarChartInstance = null;
+
+        function updateSkills(category) {
+            const btns = document.querySelectorAll('.skill-btn');
+            btns.forEach(btn => {
+                btn.classList.remove('bg-stone-800', 'text-white', 'shadow-md');
+                btn.classList.add('bg-stone-100', 'text-stone-600');
+            });
+            event.currentTarget.classList.remove('bg-stone-100', 'text-stone-600');
+            event.currentTarget.classList.add('bg-stone-800', 'text-white', 'shadow-md');
+
+            const contentDiv = document.getElementById('skill-content');
+            contentDiv.style.opacity = 0;
+            
+            setTimeout(() => {
+                const data = skillData[category];
+                contentDiv.innerHTML = `
+                    <h4 class="text-xl font-bold text-stone-900 mb-2">${data.title}</h4>
+                    <p class="text-sm font-semibold text-orange-600 mb-4 font-mono">${data.tools}</p>
+                    <p class="text-stone-600 leading-relaxed">${data.desc}</p>
+                `;
+                contentDiv.style.opacity = 1;
+
+                if (radarChartInstance) {
+                    radarChartInstance.data.datasets[0].data = data.chartData;
+                    
+                    let bgColor, borderColor;
+                    if(category === 'design') {
+                        bgColor = 'rgba(234, 88, 12, 0.2)'; 
+                        borderColor = 'rgba(234, 88, 12, 1)';
+                    } else if (category === 'technical') {
+                        bgColor = 'rgba(13, 148, 136, 0.2)'; 
+                        borderColor = 'rgba(13, 148, 136, 1)';
+                    } else {
+                        bgColor = 'rgba(71, 85, 105, 0.2)'; 
+                        borderColor = 'rgba(71, 85, 105, 1)';
+                    }
+
+                    radarChartInstance.data.datasets[0].backgroundColor = bgColor;
+                    radarChartInstance.data.datasets[0].borderColor = borderColor;
+                    radarChartInstance.data.datasets[0].pointBackgroundColor = borderColor;
+                    
+                    radarChartInstance.update();
+                }
+            }, 150);
+        }
+
+        function initCharts() {
+            Chart.defaults.font.family = "'Plus Jakarta Sans', sans-serif";
+            Chart.defaults.color = '#78716C';
+
+            const radarCtx = document.getElementById('skillsRadarChart').getContext('2d');
+            radarChartInstance = new Chart(radarCtx, {
+                type: 'radar',
+                data: {
+                    labels: chartLabels,
+                    datasets: [{
+                        label: 'Tingkat Kemampuan',
+                        data: skillData.design.chartData,
+                        backgroundColor: 'rgba(234, 88, 12, 0.2)',
+                        borderColor: 'rgba(234, 88, 12, 1)',
+                        pointBackgroundColor: 'rgba(234, 88, 12, 1)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgba(234, 88, 12, 1)',
+                        borderWidth: 2,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(0, 0, 0, 0.05)' },
+                            grid: { color: 'rgba(0, 0, 0, 0.05)' },
+                            pointLabels: {
+                                font: { size: 12, weight: '600' },
+                                color: '#2D2A26'
+                            },
+                            ticks: { display: false, min: 0, max: 100 }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: 'rgba(45, 42, 38, 0.9)',
+                            padding: 12,
+                            cornerRadius: 8,
+                            callbacks: {
+                                title: function(context) {
+                                    return context[0].label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const activityCtx = document.getElementById('activityChart').getContext('2d');
+            new Chart(activityCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul'],
+                    datasets: [{
+                        label: 'Kontribusi Proyek',
+                        data: [12, 19, 15, 25, 22, 30, 28],
+                        backgroundColor: 'rgba(45, 42, 38, 0.8)',
+                        borderRadius: 6,
+                        hoverBackgroundColor: 'rgba(234, 88, 12, 0.9)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(0,0,0,0.05)', drawBorder: false }
+                        },
+                        x: {
+                            grid: { display: false, drawBorder: false }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: 'rgba(45, 42, 38, 0.9)',
+                            padding: 12,
+                            cornerRadius: 8
+                        }
+                    }
+                }
+            });
+
+            const langCtx = document.getElementById('languageChart').getContext('2d');
+            new Chart(langCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['JavaScript', 'HTML/CSS', 'Desain (Figma/Adobe)', 'Lainnya'],
+                    datasets: [{
+                        data: [35, 25, 30, 10],
+                        backgroundColor: [
+                            '#F59E0B', 
+                            '#14B8A6', 
+                            '#8B5CF6', 
+                            '#D6D3D1'  
+                        ],
+                        borderWidth: 0,
+                        hoverOffset: 10
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { padding: 20, usePointStyle: true, pointStyle: 'circle' }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(45, 42, 38, 0.9)',
+                            padding: 12,
+                            cornerRadius: 8,
+                            callbacks: {
+                                label: function(context) {
+                                    return ' ' + context.label + ': ' + context.parsed + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const initialBtn = document.querySelector('.skill-btn');
+            updateSkills('design');
+            initCharts();
+
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    navbar.classList.add('shadow-sm');
+                    navbar.classList.replace('py-4', 'py-3');
+                } else {
+                    navbar.classList.remove('shadow-sm');
+                    navbar.classList.replace('py-3', 'py-4');
+                }
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
