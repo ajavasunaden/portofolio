@@ -1,3 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil — Javasun Aden Ancasiku</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-bg': '#fafaf9',
+                        'brand-text': '#1c1917',
+                        'brand-accent': '#ea580c',
+                        'brand-muted': '#78716c'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        brand: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { background-color: #fafaf9; color: #1c1917; scroll-behavior: smooth; }
+        .fade-in { animation: fadeInUp 1s ease forwards; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-brand-text bg-brand-bg">
+
 <nav class="fixed w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-stone-100">
     <div class="max-max-6xl mx-auto px-6">
         <div class="flex justify-between h-20 items-center">
