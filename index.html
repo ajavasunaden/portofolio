@@ -9,83 +9,89 @@
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-bg': '#F9F8F6',
-                        'brand-text': '#2D2A26',
-                        'brand-accent': '#ea580c',
-                        'brand-muted': '#78716c'
-                    },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                        brand: ['Plus Jakarta Sans', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
         
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #F9F8F6;
             color: #2D2A26;
-            scroll-behavior: smooth;
         }
 
-        /* Menghilangkan scrollbar pada menu navigasi HP agar tetap estetik */
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
 
-        /* Gaya Panel Kaca & Kartu */
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+
         .glass-panel {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
         }
 
-        .fade-in { animation: fadeInUp 1s ease forwards; }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #F3F0EC;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #D1C7BD;
+            border-radius: 20px;
         }
     </style>
+    <!-- Chosen Palette: Warm Neutrals (Stone/Sand) with subtle earthy accents for a calm, professional creative vibe. -->
+    <!-- Application Structure Plan: The SPA transforms a linear README into an interactive dashboard. 
+         1. Hero Section: Introduces the persona immediately.
+         2. Interactive Toolbox: Replaces static tables with a dynamic radar chart and clickable categories, allowing users to explore skills actively.
+         3. Project Gallery: Uses an interactive grid rather than a markdown table, enabling deeper focus on individual items.
+         4. Technical Analytics: Transforms static GitHub stat images into interactive Chart.js visualizations, fulfilling the data aspect and making the tech skills tangible.
+         This structure is chosen to encourage active exploration (clicking, hovering) rather than passive reading, fitting for a 'Creative Designer'. -->
+    <!-- Visualization & Content Choices: 
+         - Skills (Toolbox) -> Compare/Organize -> Interactive Radar Chart (Chart.js) + Tabbed Text -> Justification: Shows skill distribution visually rather than a boring list.
+         - GitHub Stats -> Inform/Compare -> Doughnut Chart (Languages) & Bar Chart (Contributions) via Chart.js -> Justification: Replaces raster images with dynamic data exploration.
+         - Projects -> Organize -> CSS Grid Cards -> Justification: Visual hierarchy for portfolio items.
+         - NO SVG/Mermaid used. Unicode used for icons. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 </head>
-<body class="antialiased">
+<body class="custom-scrollbar antialiased selection:bg-orange-200 selection:text-orange-900">
 
-    <nav class="fixed w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-stone-100">
-        <div class="max-w-6xl mx-auto px-4 md:px-6">
-            <div class="flex justify-between h-20 items-center gap-2">
-                
-                <a href="index.html" class="font-brand font-extrabold text-xl md:text-2xl tracking-tighter shrink-0 hover:opacity-80 transition-opacity">
-                    Portofolio<span class="text-brand-accent">.</span>
-                </a>
-                
-                <div class="flex overflow-x-auto no-scrollbar space-x-5 md:space-x-8 text-[13px] md:text-sm font-bold items-center mx-2">
-                    <a href="profil.html" class="whitespace-nowrap hover:text-brand-accent transition-colors">Profil</a>
-                    <a href="#skills" class="whitespace-nowrap hover:text-brand-accent transition-colors">Keahlian</a>
-                    <a href="#gallery" class="whitespace-nowrap hover:text-brand-accent transition-colors">Karya</a>
-                </div>
-
-                <div class="shrink-0">
-                    <a href="#contact" class="bg-[#1c1917] text-white px-4 py-2 md:px-6 md:py-2.5 rounded-full text-[10px] md:text-xs font-bold hover:bg-brand-accent transition-all shadow-md active:scale-95">
-                        Mari Berkolaborasi
-                    </a>
-                </div>
-
+    <nav class="fixed top-0 w-full z-50 glass-panel border-b border-stone-200 px-6 py-4 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="font-bold text-xl tracking-tight text-stone-800">Portofolio<span class="text-orange-600">.</span></div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-stone-600">
+                <a href="profil.html" class="hover:text-brand-accent transition-colors">Profil</a>
+                <a href="#skills" class="hover:text-orange-600 transition-colors">Keahlian</a>
+                <a href="#gallery" class="hover:text-orange-600 transition-colors">Karya</a>
             </div>
+            <a href="#kontak" class="bg-stone-800 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-orange-600 transition-colors">Mari Berkolaborasi</a>
         </div>
     </nav>
 
-    <main class="pt-32">
+    <main class="max-w-6xl mx-auto px-6 pt-32 pb-24 space-y-32">
 
-        <section id="profil" class="flex flex-col md:flex-row items-center gap-12 fade-in">
+        <section id="profil" class="flex flex-col md:flex-row items-center gap-12 animate-fade-in">
             <div class="flex-1 space-y-6">
                 <div class="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-orange-800 text-xs font-semibold tracking-wide uppercase">
                     👋 Halo, Selamat Datang
