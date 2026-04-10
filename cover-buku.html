@@ -3,190 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Desain Cover Novel - Javasun Aden Ancasiku</title>
-    
-    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Cover Buku Portofolio — Javasun Aden</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Montserrat:wght@800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'brand-bg': '#F9F8F6',
-                        'brand-text': '#2D2A26',
-                        'brand-accent': '#ea580c'
+                        'brand-bg': '#fafaf9',
+                        'brand-text': '#1c1917',
+                        'brand-accent': '#ea580c',
+                        'brand-muted': '#78716c'
                     },
                     fontFamily: {
                         sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        brand: ['Montserrat', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
-
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body { background-color: #fafaf9; color: #1c1917; scroll-behavior: smooth; }
+        .nav-link { transition: all 0.3s ease; }
+        .project-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .project-card:hover { transform: translateY(-8px); }
         
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #F9F8F6;
-            color: #2D2A26;
-            scroll-behavior: smooth;
-        }
-
+        /* Gaya Scrollbar Minimalis */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
-        .cover-card {
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        
-        .cover-card:hover {
-            transform: translateY(-12px);
-        }
-
-        .fade-in { animation: fadeInUp 0.8s ease forwards; }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
     </style>
 </head>
-<body class="antialiased">
+<body class="font-sans antialiased text-brand-text bg-brand-bg">
 
-    <nav class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
-        <a href="index.html" class="font-bold text-2xl tracking-tighter">
-            Portofolio<span class="text-brand-accent">.</span>
-        </a>
-        <div class="flex items-center space-x-6">
-            <div class="flex overflow-x-auto no-scrollbar space-x-6 text-[13px] font-bold items-center">
-                <a href="index.html" class="hover:text-brand-accent transition-colors">Beranda</a>
-                <a href="#koleksi" class="hover:text-brand-accent transition-colors">Koleksi</a>
-            </div>
-            <a href="index.html" class="hidden md:block text-[11px] font-bold uppercase tracking-widest border border-stone-200 px-4 py-2 rounded-full hover:bg-stone-900 hover:text-white transition">
-                ← Kembali
+<nav class="fixed w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-stone-100">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="flex justify-between h-20 items-center">
+            <a href="index.html" class="font-brand font-extrabold text-2xl tracking-tighter hover:opacity-80 transition-opacity">
+                Portofolio<span class="text-brand-accent">.</span>
             </a>
+            
+            <div class="md:flex space-x-4 text-sm font-bold items-center">
+                <a href="index.html" class="px-6 py-2.5 rounded-full bg-brand-text text-white hover:bg-stone-800 transition-all italic text-[11px] md:text-sm">
+                    Kembali ke Beranda
+                </a>
+            </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <section class="max-w-6xl mx-auto px-6 py-20 flex flex-col items-center text-center fade-in">
-        <div class="mb-6">
-            <span class="font-bold text-lg tracking-tighter text-stone-900">
+<main class="pt-32 pb-16">
+    <header class="max-w-4xl mx-auto px-6 py-20 text-center">
+        <p class="text-brand-accent font-brand font-extrabold tracking-tighter text-[14px] mb-4">
             COVER PORTOFOLIO<span class="text-brand-accent">.</span>
-            </span>
-        </div>
-        
-        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-stone-900 mb-6 tracking-tighter">
-        Membungkus Cerita <br>
-        <span class="text-brand-accent">Menjadi Visual<span class="text-brand-accent">.</span></span>
-        </h1>
-        
-        <p class="max-w-2xl text-stone-500 text-lg md:text-xl leading-relaxed mb-10">
-        Membantu penulis menghidupkan imajinasi mereka melalui desain sampul yang elegan, bercerita, dan memikat mata pembaca sejak pandangan pertama.
         </p>
         
-        <div class="flex gap-4">
-            <a href="#koleksi" class="bg-stone-900 text-white px-8 py-4 rounded-full font-bold hover:bg-brand-accent transition-all shadow-lg">
-            Lihat Koleksi
-            </a>
-        </div>
-    </section>
+        <h1 class="text-5xl md:text-7xl font-brand font-extrabold text-brand-text mb-8 tracking-tighter leading-tight">
+            Membungkus Cerita <br>
+            <span class="text-brand-accent">Menjadi Visual<span class="text-brand-accent">.</span></span>
+        </h1>
+        
+        <p class="text-lg text-brand-muted max-w-2xl mx-auto leading-relaxed">
+            Membantu penulis menghidupkan imajinasi mereka melalui desain sampul yang elegan, bercerita, dan memikat mata pembaca sejak pandangan pertama.
+        </p>
+    </header>
 
-    <section id="koleksi" class="max-w-6xl mx-auto px-6 py-24 border-t border-stone-100">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-            <div class="max-w-xl">
-                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tighter mb-4">Koleksi Terpilih</h2>
-                <p class="text-stone-500">Eksplorasi desain dari berbagai genre, dirancang untuk memberikan kenyamanan visual bagi pembaca.</p>
+    <section class="max-w-6xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="project-card bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-100 aspect-[2/3] flex items-center justify-center text-stone-300 font-bold italic">
+                Segera Hadir.
             </div>
-            <div class="flex space-x-3">
-                <span class="px-5 py-2 bg-stone-900 text-white rounded-full text-xs font-bold">Semua Karya</span>
+            <div class="project-card bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-100 aspect-[2/3] flex items-center justify-center text-stone-300 font-bold italic">
+                Segera Hadir.
             </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            
-            <div class="cover-card group">
-                <div class="aspect-[2/3] bg-stone-200 rounded-2xl overflow-hidden shadow-xl border-4 border-white relative transition-all duration-500 group-hover:shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&q=80&w=800" alt="Cover Novel 1" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
-                </div>
-                <div class="mt-6 text-center">
-                    <h3 class="text-xl font-bold text-stone-900">Rembulan di Atas Atap</h3>
-                    <p class="text-brand-accent text-[11px] font-bold uppercase tracking-widest mt-1">Contemporary Romance</p>
-                </div>
-            </div>
-
-            <div class="cover-card group">
-                <div class="aspect-[2/3] bg-stone-200 rounded-2xl overflow-hidden shadow-xl border-4 border-white relative transition-all duration-500 group-hover:shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1543004218-ee141104836d?auto=format&fit=crop&q=80&w=800" alt="Cover Novel 2" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
-                </div>
-                <div class="mt-6 text-center">
-                    <h3 class="text-xl font-bold text-stone-900">Hening Sebelum Badai</h3>
-                    <p class="text-brand-accent text-[11px] font-bold uppercase tracking-widest mt-1">Mystery / Thriller</p>
-                </div>
-            </div>
-
-            <div class="cover-card group">
-                <div class="aspect-[2/3] bg-stone-200 rounded-2xl overflow-hidden shadow-xl border-4 border-white relative transition-all duration-500 group-hover:shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=800" alt="Cover Novel 3" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
-                </div>
-                <div class="mt-6 text-center">
-                    <h3 class="text-xl font-bold text-stone-900">Negeri Tanpa Nama</h3>
-                    <p class="text-brand-accent text-[11px] font-bold uppercase tracking-widest mt-1">Epic Fantasy</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="bg-stone-900 text-white py-24">
-        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-8">Mengapa cover yang baik itu <span class="text-brand-accent">penting?</span></h2>
-                <p class="text-stone-400 text-lg mb-10 leading-relaxed">
-                    Cover adalah wajah dari cerita Anda. Ia adalah janji pertama yang Anda berikan kepada pembaca sebelum mereka membuka halaman pertama.
-                </p>
-                <ul class="space-y-8">
-                    <li class="flex items-start">
-                        <span class="text-brand-accent font-black text-2xl mr-4">01.</span>
-                        <div>
-                            <h4 class="font-bold text-lg mb-1">Riset Mendalam</h4>
-                            <p class="text-stone-400 text-sm">Memahami jiwa cerita Anda agar visual yang dihasilkan benar-benar mewakili isinya.</p>
-                        </div>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-brand-accent font-black text-2xl mr-4">02.</span>
-                        <div>
-                            <h4 class="font-bold text-lg mb-1">Tipografi Karakter</h4>
-                            <p class="text-stone-400 text-sm">Pemilihan font yang memperkuat mood dan kepribadian dari narasi novel.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="hidden md:flex justify-center">
-                <div class="w-80 h-80 rounded-3xl border border-stone-800 flex items-center justify-center p-12 text-center rotate-3 hover:rotate-0 transition-transform duration-500">
-                    <div>
-                        <div class="text-5xl mb-4">✨</div>
-                        <p class="italic text-stone-300">"Desain adalah bahasa visual yang melampaui kata-kata."</p>
-                    </div>
-                </div>
+            <div class="project-card bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-100 aspect-[2/3] flex items-center justify-center text-stone-300 font-bold italic">
+                Segera Hadir.
             </div>
         </div>
     </section>
+</main>
 
-    <footer class="py-16 bg-brand-bg px-6 border-t border-stone-200">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="text-center md:text-left">
-                <div class="font-bold text-xl mb-2">Portofolio<span class="text-brand-accent">.</span></div>
-                <p class="text-stone-400 text-xs tracking-widest uppercase font-bold">Javasun Aden Ancasiku</p>
-            </div>
-            <p class="text-stone-400 text-sm">© 2026 Studio Desain. Dibuat untuk para penulis cerita.</p>
-            <div class="flex space-x-6 font-bold text-xs uppercase tracking-widest">
-                <a href="https://instagram.com/javasun_2" target="_blank" class="hover:text-brand-accent transition">Instagram</a>
-                <a href="https://wa.me/6287736808814" target="_blank" class="hover:text-brand-accent transition">WhatsApp</a>
-            </div>
-        </div>
-    </footer>
+<footer class="py-12 border-t border-stone-100 text-center">
+    <p class="text-brand-muted text-xs font-bold tracking-widest uppercase">
+        © 2026 Javasun Aden Ancasiku
+    </p>
+</footer>
 
 </body>
 </html>
