@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AppSheet Portfolio — Javasun Aden</title>
+    <title>AppSheet Developer Portfolio — Javasun Aden</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Montserrat:wght@800&display=swap" rel="stylesheet">
@@ -27,11 +27,8 @@
     </script>
     <style>
         body { background-color: #fafaf9; color: #1c1917; scroll-behavior: smooth; }
-        .app-item-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
-        .app-item-card:hover { transform: translateY(-10px); }
-        
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .app-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .app-card:hover { transform: translateY(-8px); }
     </style>
 </head>
 <body class="font-sans antialiased text-brand-text bg-brand-bg">
@@ -42,7 +39,6 @@
             <a href="index.html" class="font-brand font-extrabold text-2xl tracking-tighter hover:opacity-80 transition-opacity">
                 Portofolio<span class="text-brand-accent">.</span>
             </a>
-            
             <div class="flex space-x-4 text-sm font-bold items-center">
                 <a href="index.html" class="px-6 py-2.5 rounded-full bg-brand-text text-white hover:bg-stone-800 transition-all italic text-[11px] md:text-sm">
                     Kembali ke Beranda
@@ -57,17 +53,69 @@
         <p class="text-brand-accent font-bold tracking-[0.3em] uppercase text-[10px] mb-4">
             Digital Marketer & Low-Code Expert<span class="text-brand-accent">.</span>
         </p>
-        
         <h1 class="text-5xl md:text-7xl font-brand font-extrabold text-brand-text mb-8 tracking-tighter leading-tight">
             Optimalkan <span class="text-brand-accent">Workflow Tim<span class="text-brand-accent">.</span></span>
         </h1>
-        
         <p class="text-lg text-brand-muted max-w-2xl mx-auto leading-relaxed">
             Membantu perusahaan menjembatani strategi pemasaran digital dengan sistem operasional yang rapi melalui aplikasi custom berbasis data.
         </p>
     </header>
 
-    <section id="portfolio" class="py-20 px-6 max-w-6xl mx-auto border-t border-stone-100">
+    <section class="max-w-6xl mx-auto px-6 py-12 border-t border-stone-100">
+        <div class="mb-12">
+            <h2 class="text-2xl font-brand font-extrabold tracking-tighter text-brand-text uppercase">
+                Solusi Utama<span class="text-brand-accent">.</span>
+            </h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div class="app-card bg-white rounded-3xl overflow-hidden shadow-sm border border-stone-100 flex flex-col">
+                <div class="aspect-video bg-stone-900 flex items-center justify-center text-white relative">
+                    <i class="fas fa-users-cog text-6xl opacity-10 absolute"></i>
+                    <span class="relative font-bold text-lg px-4 text-center">Lead Management & CRM App</span>
+                </div>
+                <div class="p-8">
+                    <p class="text-[10px] text-brand-accent font-extrabold uppercase tracking-widest mb-2">Marketing Ops</p>
+                    <h4 class="text-xl font-bold mb-4 text-stone-900">Sistem Tracking Prospek</h4>
+                    <ul class="text-brand-muted text-sm space-y-3">
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-accent text-xs"></i> Input prospek via mobile</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-accent text-xs"></i> Auto-reminder follow up</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="app-card bg-white rounded-3xl overflow-hidden shadow-sm border border-stone-100 flex flex-col">
+                <div class="aspect-video bg-brand-accent flex items-center justify-center text-white relative">
+                    <i class="fas fa-calendar-check text-6xl opacity-20 absolute"></i>
+                    <span class="relative font-bold text-lg px-4 text-center">Team Task Monitoring</span>
+                </div>
+                <div class="p-8">
+                    <p class="text-[10px] text-brand-accent font-extrabold uppercase tracking-widest mb-2">Management</p>
+                    <h4 class="text-xl font-bold mb-4 text-stone-900">Monitoring Kerja Tim</h4>
+                    <ul class="text-brand-muted text-sm space-y-3">
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-accent text-xs"></i> Penugasan real-time</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-accent text-xs"></i> Bukti kerja foto/file</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="app-card bg-white rounded-3xl overflow-hidden shadow-sm border border-stone-100 flex flex-col">
+                <div class="aspect-video bg-stone-200 flex items-center justify-center text-brand-text relative">
+                    <i class="fas fa-warehouse text-6xl opacity-10 absolute"></i>
+                    <span class="relative font-bold text-lg px-4 text-center">Marketing Asset Inventory</span>
+                </div>
+                <div class="p-8">
+                    <p class="text-[10px] text-brand-accent font-extrabold uppercase tracking-widest mb-2">Resources</p>
+                    <h4 class="text-xl font-bold mb-4 text-stone-900">Logistik & Asset Marketing</h4>
+                    <ul class="text-brand-muted text-sm space-y-3">
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-accent text-xs"></i> Manajemen stok promo</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-accent text-xs"></i> Barcode/QR Code scanner</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 py-20 border-t border-stone-100">
         <div class="mb-16 text-center">
             <h2 class="text-3xl md:text-4xl font-brand font-extrabold tracking-tighter text-brand-text uppercase">
                 Aplikasi Yang Telah Dibuat<span class="text-brand-accent">.</span>
@@ -76,58 +124,50 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            
-            <div class="app-item-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-stone-100 group">
+            <div class="app-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl border border-stone-100 group">
                 <div class="aspect-[9/16] bg-stone-200 relative overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1000&auto=format&fit=crop" alt="App Screenshot 1" class="object-cover h-full w-full grayscale group-hover:grayscale-0 transition duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1000&auto=format&fit=crop" class="object-cover h-full w-full grayscale group-hover:grayscale-0 transition duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity">
                         <span class="text-white font-bold text-sm tracking-widest uppercase italic">Tampilan Mobile</span>
                     </div>
                 </div>
                 <div class="p-8">
-                    <h3 class="font-brand font-extrabold text-xl text-stone-900 mb-2">Sales Monitoring App</h3>
-                    <p class="text-brand-muted text-sm mb-6 leading-relaxed">Aplikasi untuk memantau aktivitas sales lapangan dan input data prospek secara real-time.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-orange-50 text-brand-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-orange-100">Google Sheets</span>
-                        <span class="bg-orange-50 text-brand-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-orange-100">Automation</span>
+                    <h3 class="font-brand font-extrabold text-xl mb-2">Sales Tracking UI</h3>
+                    <div class="flex gap-2">
+                        <span class="bg-orange-50 text-brand-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase">Google Sheets</span>
                     </div>
                 </div>
             </div>
 
-            <div class="app-item-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-stone-100 group">
+            <div class="app-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl border border-stone-100 group">
                 <div class="aspect-[9/16] bg-stone-200 relative overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?q=80&w=1000&auto=format&fit=crop" alt="App Screenshot 2" class="object-cover h-full w-full grayscale group-hover:grayscale-0 transition duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <span class="text-white font-bold text-sm tracking-widest uppercase italic">Dashboard Internal</span>
+                    <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?q=80&w=1000&auto=format&fit=crop" class="object-cover h-full w-full grayscale group-hover:grayscale-0 transition duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white font-bold text-sm tracking-widest uppercase italic">Dashboard Interface</span>
                     </div>
                 </div>
                 <div class="p-8">
-                    <h3 class="font-brand font-extrabold text-xl text-stone-900 mb-2">HR Management Tool</h3>
-                    <p class="text-brand-muted text-sm mb-6 leading-relaxed">Sistem absensi dan pengajuan cuti karyawan dengan integrasi approval otomatis.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-orange-50 text-brand-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-orange-100">UI/UX Design</span>
-                        <span class="bg-orange-50 text-brand-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-orange-100">Cloud Data</span>
+                    <h3 class="font-brand font-extrabold text-xl mb-2">HR Management UI</h3>
+                    <div class="flex gap-2">
+                        <span class="bg-orange-50 text-brand-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase">Cloud Data</span>
                     </div>
                 </div>
             </div>
 
-            <div class="app-item-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-stone-100 group">
+            <div class="app-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl border border-stone-100 group">
                 <div class="aspect-[9/16] bg-stone-200 relative overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop" alt="App Screenshot 3" class="object-cover h-full w-full grayscale group-hover:grayscale-0 transition duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <span class="text-white font-bold text-sm tracking-widest uppercase italic">Inventory Control</span>
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop" class="object-cover h-full w-full grayscale group-hover:grayscale-0 transition duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white font-bold text-sm tracking-widest uppercase italic">Inventory UI</span>
                     </div>
                 </div>
                 <div class="p-8">
-                    <h3 class="font-brand font-extrabold text-xl text-stone-900 mb-2">Inventory System</h3>
-                    <p class="text-brand-muted text-sm mb-6 leading-relaxed">Manajemen stok barang masuk dan keluar dengan fitur scan barcode dari kamera HP.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-orange-50 text-brand-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-orange-100">Barcode</span>
-                        <span class="bg-orange-50 text-brand-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-orange-100">Analytics</span>
+                    <h3 class="font-brand font-extrabold text-xl mb-2">Stock Control UI</h3>
+                    <div class="flex gap-2">
+                        <span class="bg-orange-50 text-brand-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase">Barcode</span>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 </main>
