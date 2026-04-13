@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppSheet Developer Portfolio — Javasun Aden</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-bg': '#fafaf9',
+                        'brand-text': '#1c1917',
+                        'brand-accent': '#ea580c',
+                        'brand-muted': '#78716c'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        brand: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #fafaf9; color: #1c1917; scroll-behavior: smooth; }
+        .app-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .app-card:hover { transform: translateY(-8px); }
+    </style>
+</head>
+<body class="font-sans antialiased text-brand-text bg-brand-bg">
+
+<nav class="fixed w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-stone-100">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="flex justify-between h-20 items-center">
+            <a href="index.html" class="font-brand font-extrabold text-2xl tracking-tighter hover:opacity-80 transition-opacity">
+                Portofolio<span class="text-brand-accent">.</span>
+            </a>
+            
+            <div class="flex space-x-4 text-sm font-bold items-center">
+                <a href="index.html" class="px-6 py-2.5 rounded-full bg-brand-text text-white hover:bg-stone-800 transition-all italic text-[11px] md:text-sm">
+                    Kembali ke Beranda
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="pt-32 pb-16">
+    <header class="max-w-4xl mx-auto px-6 py-20 text-center">
+        <p class="text-brand-accent font-bold tracking-[0.3em] uppercase text-[10px] mb-4">Digital Marketer & Low-Code Expert</p>
+        <h1 class="text-4xl md:text-6xl font-brand font-extrabold text-brand-text mb-8 tracking-tighter leading-tight">
+            Optimalkan <span class="text-brand-accent">Workflow Tim.</span>
+        </h1>
+        <p class="text-lg text-brand-muted max-w-2xl mx-auto leading-relaxed">
+            Membantu perusahaan menjembatani strategi pemasaran digital dengan sistem operasional yang rapi melalui aplikasi custom berbasis data.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#apps" class="px-8 py-4 bg-brand-text text-white rounded-full font-bold hover:bg-stone-800 transition shadow-lg">Lihat Showcase Aplikasi</a>
+            <a href="#contact" class="px-8 py-4 bg-white text-brand-text border border-stone-200 rounded-full font-bold hover:bg-stone-50 transition shadow-sm">Hubungi Saya</a>
+        </div>
+    </header>
+
+    <section class="py-20 bg-stone-50 border-y border-stone-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12 text-center">
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-white text-brand-accent rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl shadow-sm border border-stone-100">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Data-Driven Marketing</h3>
+                    <p class="text-brand-muted text-sm">Integrasi data kampanye digital ke dalam dashboard monitoring yang real-time.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-white text-brand-accent rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl shadow-sm border border-stone-100">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Workflow Automation</h3>
+                    <p class="text-brand-muted text-sm">Otomatisasi tugas rutin tim marketing agar lebih fokus pada strategi kreatif.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-white text-brand-accent rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl shadow-sm border border-stone-100">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Custom Solution</h3>
+                    <p class="text-brand-muted text-sm">Aplikasi mobile tanpa biaya maintenance tinggi untuk kebutuhan spesifik perusahaan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="apps" class="py-24 max-w-6xl mx-auto px-6">
+        <div class="mb-16 text-center">
+            <h2 class="text-3xl font-brand font-extrabold tracking-tighter">Solusi AppSheet Yang Dibangun<span class="text-brand-accent">.</span></h2>
+            <p class="text-brand-muted mt-2">Efisiensi operasional dimulai dari sistem yang tepat guna.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="app-card bg-white rounded-3xl overflow-hidden shadow-sm border border-stone-100 flex flex-col">
+                <div class="aspect-video bg-stone-900 flex items-center justify-center text-white relative">
+                    <i class="fas fa-users-cog text-6xl opacity-10 absolute"></i>
+                    <span class="relative font-bold text-lg px-4 text-center">Lead Management & CRM App</span>
+                </div>
+                <div class="p-8">
+                    <p class="text-[10px] text-brand-accent font-extrabold uppercase tracking-widest mb-2">Marketing Ops</p>
+                    <h4 class="text-xl font-bold mb-4">Sistem Tracking Prospek</h4>
+                    <ul class="text-brand-muted text-sm space-y-3">
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-accent text-xs"></i> Input prospek via mobile</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-accent text-xs"></i> Auto-reminder follow up</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-accent text-xs"></i> Reporting dashboard per sales</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="app-card bg-white rounded-3xl overflow-hidden shadow-sm border border-stone-100 flex flex-col">
+                <div class="aspect-video bg-brand-accent flex items-center justify-center text-white relative">
+                    <i class="fas fa-calendar-check text-6xl opacity-20 absolute"></i>
+                    <span class="relative font-bold text-lg px-4 text-center">Team Task Monitoring</span>
+                </div>
+                <div class="p-8">
+                    <p class="text-[10px] text-brand-accent font-extrabold uppercase tracking-widest mb-2">Management</p>
+                    <h4 class="text-xl font-bold mb-4">Monitoring Kerja Tim</h4>
+                    <ul class="text-brand-muted text-sm space-y-3">
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-accent text-xs"></i> Penugasan real-time</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-accent text-xs"></i> Lampiran bukti kerja (foto/file)</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-accent text-xs"></i> Timesheet otomatis</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="app-card bg-white rounded-3xl overflow-hidden shadow-sm border border-stone-100 flex flex-col">
+                <div class="aspect-video bg-stone-200 flex items-center justify-center text-brand-text relative">
+                    <i class="fas fa-warehouse text-6xl opacity-10 absolute"></i>
+                    <span class="relative font-bold text-lg px-4 text-center">Marketing Asset Inventory</span>
+                </div>
+                <div class="p-8">
+                    <p class="text-[10px] text-brand-accent font-extrabold uppercase tracking-widest mb-2">Resources</p>
+                    <h4 class="text-xl font-bold mb-4">Logistik & Asset Marketing</h4>
+                    <ul class="text-brand-muted text-sm space-y-3">
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-accent text-xs"></i> Manajemen stok promo</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-accent text-xs"></i> Barcode/QR Code scanner</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-accent text-xs"></i> Notifikasi stok menipis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-stone-900 text-white rounded-[3rem] mx-6">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-brand font-extrabold tracking-tighter mb-6 italic">Efficiency at its best.</h2>
+                    <p class="text-stone-400 mb-8 leading-relaxed">
+                        Sebagai seorang Digital Marketer, saya memahami bahwa strategi yang hebat tanpa eksekusi operasional yang terukur akan berujung sia-sia.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-stone-800 p-6 rounded-2xl border border-stone-700">
+                            <div class="text-3xl font-brand font-extrabold text-brand-accent">50%</div>
+                            <p class="text-[10px] uppercase font-bold tracking-widest text-stone-500 mt-2">Waktu Admin</p>
+                        </div>
+                        <div class="bg-stone-800 p-6 rounded-2xl border border-stone-700">
+                            <div class="text-3xl font-brand font-extrabold text-brand-accent">100%</div>
+                            <p class="text-[10px] uppercase font-bold tracking-widest text-stone-500 mt-2">Data Real-Time</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex gap-4 p-4 rounded-2xl hover:bg-stone-800 transition">
+                        <div class="w-10 h-10 bg-brand-accent rounded-full flex items-center justify-center shrink-0"><i class="fas fa-check"></i></div>
+                        <div>
+                            <h5 class="font-bold">Pemahaman Bisnis</h5>
+                            <p class="text-sm text-stone-500">Saya tidak hanya membuat aplikasi, tapi mendesain alur kerja yang membantu konversi penjualan.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-4 rounded-2xl hover:bg-stone-800 transition">
+                        <div class="w-10 h-10 bg-brand-accent rounded-full flex items-center justify-center shrink-0"><i class="fas fa-check"></i></div>
+                        <div>
+                            <h5 class="font-bold">Cost-Efficient</h5>
+                            <p class="text-sm text-stone-500">Menggunakan ekosistem Google far more affordable daripada develop aplikasi native.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 text-center max-w-3xl mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl font-brand font-extrabold tracking-tighter mb-8 leading-tight">
+            Siap Membangun Sistem yang <span class="text-brand-accent">Lebih Pintar?</span>
+        </h2>
+        <p class="text-brand-muted mb-12">
+            Konsultasikan kebutuhan workflow tim Anda dan saya akan bangunkan aplikasi AppSheet yang sesuai dalam hitungan hari.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-6">
+            <a href="mailto:your@email.com" class="px-10 py-4 bg-brand-text text-white rounded-full font-bold hover:bg-stone-800 transition shadow-xl">
+                Kirim Email
+            </a>
+            <a href="https://wa.me/yournumber" class="px-10 py-4 border-2 border-brand-text text-brand-text rounded-full font-bold hover:bg-stone-50 transition">
+                WhatsApp Sekarang
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="py-12 border-t border-stone-100 text-center">
+    <p class="text-brand-muted text-[10px] font-bold tracking-widest uppercase">
+        © 2026 JAVASUN ADEN ANCASIKU
+    </p>
+</footer>
+
+</body>
+</html>
