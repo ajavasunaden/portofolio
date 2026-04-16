@@ -5,16 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Growth & Optimization - Javasun Aden</title>
     
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
 
-    <!-- Font Awesome untuk Ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:weight@400;500;600;700;800&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Montserrat:wght@800&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -27,8 +23,10 @@
                         'brand-muted': '#78716c',
                     },
                     fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                        brand: ['Montserrat', 'sans-serif'],
+                        // Kita definisikan sans sebagai Plus Jakarta Sans
+                        'sans': ['"Plus Jakarta Sans"', 'sans-serif'],
+                        // Kita definisikan brand sebagai Montserrat
+                        'brand': ['Montserrat', 'sans-serif'],
                     }
                 }
             }
@@ -37,136 +35,81 @@
 
     <style>
         body { background-color: #fafaf9; color: #1c1917; scroll-behavior: smooth; }
-        .font-brand { font-family: 'Montserrat', sans-serif; }
+        /* Hapus selector .font-brand manual agar tidak bentrok dengan Tailwind */
         .app-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
     </style>
 </head>
 <body class="font-sans antialiased">
 
-    <!-- NAVIGATION -->
-<nav class="fixed w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-stone-100">
-    <div class="max-w-6xl mx-auto px-6">
-        <div class="flex justify-between h-20 items-center">
-            <a href="index.html" class="font-brand font-extrabold text-2xl tracking-tighter hover:opacity-80 transition-opacity">
+    <nav class="fixed w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-stone-100">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="font-brand font-extrabold text-2xl tracking-tighter hover:opacity-80 transition-opacity uppercase">
                 Portofolio<span class="text-brand-accent">.</span>
             </a>
-            
-            <div class="hidden md:flex space-x-4 text-sm font-bold items-center">
-                <a href="index.html#contact" class="px-6 py-2.5 rounded-full bg-brand-text text-white hover:bg-stone-800 transition-all italic">
+            <div class="hidden md:flex space-x-4 text-[10px] font-bold items-center">
+                <a href="index.html" class="px-6 py-2.5 rounded-full bg-brand-text text-white hover:bg-brand-accent transition-all tracking-widest uppercase">
                     Kembali ke Beranda
                 </a>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-    <!-- MAIN CONTENT -->
-    <main class="pt-32 pb-20">
+    <main class="pt-40 pb-20">
         
-        <!-- HERO SECTION -->
-        <header class="max-w-4xl mx-auto px-6 text-center mb-24 pt-32">
+        <header class="max-w-4xl mx-auto px-6 text-center mb-24">
             <span class="text-[10px] text-brand-accent font-bold uppercase tracking-[0.5em] block mb-4 font-sans">Portfolio Web</span>
             
-            <h1 class="text-5xl md:text-7xl font-brand font-extrabold text-brand-text mb-8 tracking-tighter leading-none">
-                Website <span class="text-brand-accent">Growth<span class="font-sans italic">.</span></span>
+            <h1 class="text-5xl md:text-7xl font-brand font-extrabold text-brand-text mb-8 tracking-tighter leading-none uppercase">
+                Website <span class="text-brand-accent">Growth<span class="font-sans normal-case">.</span></span>
             </h1>
             
-            <p class="text-lg md:text-xl text-brand-muted max-w-2xl mx-auto leading-relaxed font-medium font-sans opacity-80">
+            <p class="text-lg md:text-xl text-brand-muted max-w-2xl mx-auto leading-relaxed font-medium font-sans opacity-90">
                 Fokus pada produksi artikel yang mudah ditemukan audiens serta pengembangan halaman web yang fungsional untuk pengalaman audiens yang lebih baik.
             </p>
         </header>
 
-        <!-- PROJECTS GRID -->
         <section class="max-w-6xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
                 
-                <!-- PROYEK 1: SEO CONTENT -->
                 <div class="app-card group">
                     <div class="bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-stone-100 hover:shadow-2xl transition-all duration-500">
                         <div class="aspect-[4/5] bg-stone-200 relative overflow-hidden">
-                            <!-- Placeholder Image: Screenshot Dashboard/Artikel -->
                             <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop" 
-                                 alt="SEO Content Management" 
-                                 class="object-cover h-full w-full grayscale group-hover:grayscale-0 transition duration-700 group-hover:scale-105">
+                                 alt="SEO Content" class="object-cover h-full w-full grayscale group-hover:grayscale-0 transition duration-700 group-hover:scale-105">
                         </div>
                         <div class="p-10">
-                            <!-- LABEL STATISTIK -->
-                            <div class="flex items-center gap-2 mb-4 text-orange-600 bg-orange-50 w-fit px-4 py-1.5 rounded-full">
+                            <div class="flex items-center gap-2 mb-4 text-orange-600 bg-orange-50 w-fit px-4 py-1.5 rounded-full font-sans">
                                 <i class="fa-solid fa-file-signature text-[10px]"></i>
                                 <span class="text-[10px] font-bold tracking-widest uppercase">70+ Artikel Terbit</span>
                             </div>
-
-                            <h3 class="font-brand font-extrabold text-2xl text-stone-900 mb-4 uppercase tracking-tighter leading-tight">
-                                SEO Content Writing & Management
-                            </h3>
+                            <h3 class="font-brand font-extrabold text-2xl text-stone-900 mb-4 uppercase tracking-tighter">SEO Content Writing</h3>
+                            <p class="font-sans text-brand-muted text-sm mb-8 leading-relaxed">Pembuatan artikel berkala dan optimasi on-page untuk kebutuhan trafik website.</p>
                             
-                            <p class="text-brand-muted text-sm mb-8 leading-relaxed">
-                                Pembuatan artikel berkala dan optimasi on-page (seperti meta description dan alt-text gambar) untuk kebutuhan trafik website.
-                            </p>
-                            
-                            <div class="space-y-4 pt-6 border-t border-stone-100">
-                                <div class="flex flex-col">
-                                    <span class="text-[10px] font-bold text-brand-accent uppercase tracking-widest mb-1">Platform</span>
-                                    <span class="text-sm font-semibold text-brand-text">WordPress</span>
-                                </div>
-                                <div class="flex flex-col">
-                                    <span class="text-[10px] font-bold text-brand-accent uppercase tracking-widest mb-1">Role</span>
-                                    <span class="text-sm font-semibold text-brand-text">Content Writer & Web Administrator</span>
-                                </div>
-                                <div class="flex flex-col">
-                                    <span class="text-[10px] font-bold text-brand-accent uppercase tracking-widest mb-1">Fokus Utama</span>
-                                    <span class="text-sm font-semibold text-brand-text">SEO Optimization & On-Page Strategy</span>
-                                </div>
-                                <div class="flex flex-col">
-                                    <span class="text-[10px] font-bold text-brand-accent uppercase tracking-widest mb-1">Periode</span>
-                                    <span class="text-sm font-semibold text-brand-text">2022 - Sekarang</span>
-                                </div>
+                            <div class="space-y-4 pt-6 border-t border-stone-100 font-sans">
+                                <div class="flex flex-col"><span class="text-[10px] font-bold text-brand-accent uppercase tracking-widest">Platform</span><span class="text-sm font-semibold">WordPress</span></div>
+                                <div class="flex flex-col"><span class="text-[10px] font-bold text-brand-accent uppercase tracking-widest">Role</span><span class="text-sm font-semibold">Content Writer</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- PROYEK 2: WEB PAGE DEV -->
                 <div class="app-card group">
                     <div class="bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-stone-100 hover:shadow-2xl transition-all duration-500">
                         <div class="aspect-[4/5] bg-stone-200 relative overflow-hidden">
-                            <!-- Placeholder Image: Screenshot Landing Page -->
                             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" 
-                                 alt="Web Page Development" 
-                                 class="object-cover h-full w-full grayscale group-hover:grayscale-0 transition duration-700 group-hover:scale-105">
+                                 alt="Web Dev" class="object-cover h-full w-full grayscale group-hover:grayscale-0 transition duration-700 group-hover:scale-105">
                         </div>
                         <div class="p-10">
-                            <!-- LABEL -->
-                            <div class="flex items-center gap-2 mb-4 text-brand-text bg-stone-100 w-fit px-4 py-1.5 rounded-full">
+                            <div class="flex items-center gap-2 mb-4 text-brand-text bg-stone-100 w-fit px-4 py-1.5 rounded-full font-sans">
                                 <i class="fa-solid fa-compass-drafting text-[10px]"></i>
-                                <span class="text-[10px] font-bold tracking-widest uppercase">Functional Page Builder</span>
+                                <span class="text-[10px] font-bold tracking-widest uppercase">Functional Page</span>
                             </div>
-
-                            <h3 class="font-brand font-extrabold text-2xl text-stone-900 mb-4 uppercase tracking-tighter leading-tight">
-                                Web Page Development (Landing Page)
-                            </h3>
+                            <h3 class="font-brand font-extrabold text-2xl text-stone-900 mb-4 uppercase tracking-tighter">Web Page Development</h3>
+                            <p class="font-sans text-brand-muted text-sm mb-8 leading-relaxed">Merancang dan menyusun halaman spesifik menggunakan page builder yang responsif.</p>
                             
-                            <p class="text-brand-muted text-sm mb-8 leading-relaxed">
-                                Merancang dan menyusun satu halaman spesifik (misalnya halaman produk atau about us) menggunakan page builder, memastikan tata letak rapi dan responsif.
-                            </p>
-                            
-                            <div class="space-y-4 pt-6 border-t border-stone-100">
-                                <div class="flex flex-col">
-                                    <span class="text-[10px] font-bold text-brand-accent uppercase tracking-widest mb-1">Platform</span>
-                                    <span class="text-sm font-semibold text-brand-text">WordPress (Elementor/Breakdance)</span>
-                                </div>
-                                <div class="flex flex-col">
-                                    <span class="text-[10px] font-bold text-brand-accent uppercase tracking-widest mb-1">Role</span>
-                                    <span class="text-sm font-semibold text-brand-text">Web Administrator</span>
-                                </div>
-                                <div class="flex flex-col">
-                                    <span class="text-[10px] font-bold text-brand-accent uppercase tracking-widest mb-1">Fokus Utama</span>
-                                    <span class="text-sm font-semibold text-brand-text">Layouting & Mobile Responsivity</span>
-                                </div>
-                                <div class="flex flex-col">
-                                    <span class="text-[10px] font-bold text-brand-accent uppercase tracking-widest mb-1">Periode</span>
-                                    <span class="text-sm font-semibold text-brand-text">2026 - Sekarang</span>
-                                </div>
+                            <div class="space-y-4 pt-6 border-t border-stone-100 font-sans">
+                                <div class="flex flex-col"><span class="text-[10px] font-bold text-brand-accent uppercase tracking-widest">Platform</span><span class="text-sm font-semibold">WordPress</span></div>
+                                <div class="flex flex-col"><span class="text-[10px] font-bold text-brand-accent uppercase tracking-widest">Fokus</span><span class="text-sm font-semibold">Layouting</span></div>
                             </div>
                         </div>
                     </div>
@@ -174,15 +117,13 @@
 
             </div>
         </section>
-
     </main>
 
-    <!-- FOOTER SIMPLE -->
     <footer class="py-16 border-t border-stone-100 text-center">
-    <p class="text-brand-muted text-[10px] font-bold tracking-widest uppercase">
-        © 2026 JAVASUN ADEN ANCASIKU
-    </p>
-</footer>
+        <p class="text-brand-muted text-[10px] font-bold tracking-[0.5em] uppercase font-sans">
+            © 2026 JAVASUN ADEN ANCASIKU
+        </p>
+    </footer>
 
 </body>
 </html>
