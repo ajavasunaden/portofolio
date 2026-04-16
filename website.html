@@ -44,31 +44,37 @@
 <body class="font-sans antialiased">
 
     <!-- NAVIGATION -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-stone-100">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="index.html" class="font-brand font-extrabold text-2xl tracking-tighter uppercase">
+<nav class="fixed w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-stone-100">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="flex justify-between h-20 items-center">
+            <a href="index.html" class="font-brand font-extrabold text-2xl tracking-tighter hover:opacity-80 transition-opacity">
                 Portofolio<span class="text-brand-accent">.</span>
             </a>
-            <a href="index.html" class="bg-brand-text text-white px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-brand-accent transition-colors">
-                Kembali ke Beranda
-            </a>
+            
+            <div class="hidden md:flex space-x-4 text-sm font-bold items-center">
+                <a href="index.html#contact" class="px-6 py-2.5 rounded-full bg-brand-text text-white hover:bg-stone-800 transition-all italic">
+                    Kembali ke Beranda
+                </a>
+            </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- MAIN CONTENT -->
     <main class="pt-32 pb-20">
         
         <!-- HERO SECTION -->
         <header class="max-w-4xl mx-auto px-6 text-center mb-24 pt-32">
-            <span class="text-[10px] text-brand-accent font-bold uppercase tracking-[0.5em] block mb-4">Portfolio Web</span>
-    
+            <span class="text-[10px] text-brand-accent font-bold uppercase tracking-[0.5em] block mb-4 font-sans">Portfolio Web</span>
+            
             <h1 class="text-5xl md:text-7xl font-brand font-extrabold text-brand-text mb-8 tracking-tighter leading-none">
-                Website <span class="text-brand-accent">Growth<span class="font-sans">.</span></span>
+                Website <span class="text-brand-accent">Growth<span class="font-sans italic">.</span></span>
             </h1>
-            <p class="text-lg md:text-xl text-brand-muted max-w-2xl mx-auto leading-relaxed font-medium font-sans">
+            
+            <p class="text-lg md:text-xl text-brand-muted max-w-2xl mx-auto leading-relaxed font-medium font-sans opacity-80">
                 Fokus pada produksi artikel yang mudah ditemukan audiens serta pengembangan halaman web yang fungsional untuk pengalaman audiens yang lebih baik.
             </p>
-</header>
+        </header>
 
         <!-- PROJECTS GRID -->
         <section class="max-w-6xl mx-auto px-6">
