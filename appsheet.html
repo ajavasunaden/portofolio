@@ -128,7 +128,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             
-            <div class="aspect-[16/9] bg-stone-200 relative overflow-hidden cursor-pointer" onclick="openModal('https://i.imgur.com/Obu88u.jpeg')">
+            <div class="app-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl border border-stone-100 group">
                 <div class="aspect-[16/9] bg-stone-200 relative overflow-hidden">
                     <img src="https://i.imgur.com/OGTeB8u.jpeg" class="object-cover h-full w-full transition duration-700 group-hover:scale-105">
                 </div>
@@ -144,7 +144,7 @@
                 </div>
             </div>
 
-            <div class="aspect-[16/9] bg-stone-200 relative overflow-hidden cursor-pointer" onclick="openModal('https://images.unsplash.com/photo-1555774698-0b77e0d5fac6...')">
+            <div class="app-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl border border-stone-100 group">
                 <div class="aspect-[16/9] bg-stone-200 relative overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?q=80&w=1000&auto=format&fit=crop" class="object-cover h-full w-full transition duration-700 group-hover:scale-105">
                 </div>
@@ -159,6 +159,23 @@
                     </div>
                 </div>
             </div>
+
+            <div class="app-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl border border-stone-100 group">
+                <div class="aspect-[16/9] bg-stone-200 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop" class="object-cover h-full w-full transition duration-700 group-hover:scale-105">
+                </div>
+                <div class="p-8">
+                    <h3 class="font-brand font-extrabold text-xl text-stone-900 mb-2">Inventory System</h3>
+                    <p class="text-brand-muted text-sm mb-6 leading-relaxed">
+                        Manajemen stok barang masuk dan keluar dengan fitur scan barcode dari kamera HP.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-orange-50 text-brand-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-orange-100">Barcode Scanner</span>
+                        <span class="bg-orange-50 text-brand-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-orange-100">Analytics</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 </main>
@@ -168,30 +185,6 @@
         © 2026 JAVASUN ADEN ANCASIKU
     </p>
 </footer>
-<div id="imageModal" class="fixed inset-0 z-[100] hidden bg-stone-900/95 backdrop-blur-md flex-col items-center justify-center p-4">
-    <button onclick="closeModal()" class="absolute top-6 right-6 text-white text-5xl hover:text-brand-accent transition-all">&times;</button>
-    
-    <div class="max-w-5xl w-full flex items-center justify-center">
-        <img id="modalImg" src="" class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl">
-    </div>
-</div>
-<script>
-    function openModal(imageSrc) {
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImg');
-        
-        modalImg.src = imageSrc; // Memasukkan gambar yang diklik ke modal
-        modal.classList.remove('hidden'); // Memunculkan modal
-        modal.classList.add('flex');
-        document.body.style.overflow = 'hidden'; // Agar halaman belakang tidak bisa di-scroll
-    }
 
-    function closeModal() {
-        const modal = document.getElementById('imageModal');
-        modal.classList.add('hidden'); // Menghilangkan modal
-        modal.classList.remove('flex');
-        document.body.style.overflow = 'auto'; // Mengaktifkan scroll lagi
-    }
-</script>
 </body>
 </html>
