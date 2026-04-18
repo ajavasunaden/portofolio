@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster Promosi | Javasun Aden Ancasiku</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            text: '#1c1917',   /* stone-900 */
+                            muted: '#78716c',  /* stone-500 */
+                            accent: '#f97316'  /* orange-500 */
+                        }
+                    },
+                    fontFamily: {
+                        brand: ['Plus Jakarta Sans', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#fafaf9] text-brand-text">
+
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-stone-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="../index.html" class="text-xl font-extrabold tracking-tighter uppercase">Javasun<span class="text-brand-accent">.</span></a>
+            <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-widest">
+                <a href="../index.html" class="hover:text-brand-accent transition">Portfolio</a>
+                <a href="#" class="hover:text-brand-accent transition">About</a>
+                <a href="#" class="hover:text-brand-accent transition text-brand-accent">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-40 pb-16 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-brand-accent font-bold tracking-[0.3em] uppercase text-[10px] mb-4">Promotional Design</p>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-8 tracking-tighter leading-tight uppercase">
+                Poster <span class="text-stone-300">&</span> Promosi
+            </h1>
+            <p class="text-brand-muted text-lg max-w-2xl mx-auto leading-relaxed">
+                Visual strategis untuk event, produk, dan kampanye digital yang dirancang untuk menarik perhatian dan menyampaikan pesan secara efektif.
+            </p>
+        </div>
+    </header>
+
+    <div class="flex justify-center gap-4 mb-12">
+        <button class="px-6 py-2 bg-brand-text text-white text-[10px] font-bold uppercase tracking-widest rounded-full transition">Semua</button>
+        <button class="px-6 py-2 bg-white border border-stone-200 text-brand-muted text-[10px] font-bold uppercase tracking-widest rounded-full hover:border-brand-accent transition">Event</button>
+        <button class="px-6 py-2 bg-white border border-stone-200 text-brand-muted text-[10px] font-bold uppercase tracking-widest rounded-full hover:border-brand-accent transition">Produk</button>
+    </div>
+
+    <section class="max-w-7xl mx-auto px-6 pb-32">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <div class="group">
+                <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem] bg-stone-200 border border-stone-100 shadow-sm transition-all duration-500 hover:shadow-2xl">
+                    <img src="img/poster-1.jpg" alt="Event Musik" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-stone-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-white px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest">Detail</span>
+                    </div>
+                </div>
+                <div class="mt-6 px-2 text-center">
+                    <h3 class="font-bold text-lg uppercase tracking-tight">Neon Nights 2024</h3>
+                    <p class="text-brand-muted text-[10px] uppercase tracking-widest mt-1">Event Musik</p>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem] bg-stone-200 border border-stone-100 shadow-sm transition-all duration-500 hover:shadow-2xl">
+                    <img src="img/poster-2.jpg" alt="Produk Sepatu" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-stone-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-white px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest">Detail</span>
+                    </div>
+                </div>
+                <div class="mt-6 px-2 text-center">
+                    <h3 class="font-bold text-lg uppercase tracking-tight">Aero Dynamic Sneakers</h3>
+                    <p class="text-brand-muted text-[10px] uppercase tracking-widest mt-1">Iklan Produk</p>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem] bg-stone-200 border border-stone-100 shadow-sm transition-all duration-500 hover:shadow-2xl">
+                    <img src="img/poster-3.jpg" alt="Festival Kuliner" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-stone-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-white px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest">Detail</span>
+                    </div>
+                </div>
+                <div class="mt-6 px-2 text-center">
+                    <h3 class="font-bold text-lg uppercase tracking-tight">Bazaar Rasa Nusantara</h3>
+                    <p class="text-brand-muted text-[10px] uppercase tracking-widest mt-1">Kuliner</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="py-20 border-t border-stone-100 bg-white">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="flex flex-col items-center md:items-start">
+                <div class="text-xl font-extrabold tracking-tighter uppercase mb-2">Javasun<span class="text-brand-accent">.</span></div>
+                <p class="text-brand-muted text-[10px] uppercase tracking-[0.2em]">Graphic Designer & Digital Marketer</p>
+            </div>
+            
+            <div class="flex gap-8">
+                <a href="#" class="text-stone-400 hover:text-brand-accent transition-all"><i class="fa-brands fa-instagram text-xl"></i></a>
+                <a href="#" class="text-stone-400 hover:text-brand-accent transition-all"><i class="fa-brands fa-behance text-xl"></i></a>
+                <a href="#" class="text-stone-400 hover:text-brand-accent transition-all"><i class="fa-brands fa-linkedin text-xl"></i></a>
+            </div>
+
+            <p class="text-brand-muted text-[10px] uppercase tracking-widest">© 2026 Yogyakarta, Indonesia</p>
+        </div>
+    </footer>
+
+</body>
+</html>
