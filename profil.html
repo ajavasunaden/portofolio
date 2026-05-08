@@ -202,26 +202,33 @@
 
     <script>
         const modal = document.getElementById('certModal');
-        const modalImg = document.getElementById('modalImg');
-        const modalTitle = document.getElementById('modalTitle');
+    const modalImg = document.getElementById('modalImg');
+    const modalTitle = document.getElementById('modalTitle');
 
-        function openCertModal(imgSrc, title) {
-            modalImg.src = imgSrc;
-            modalTitle.innerText = title;
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            document.body.style.overflow = 'hidden'; // Matikan scroll saat preview muncul
+    function openCertModal(imgSrc, title) {
+        modalImg.src = imgSrc;
+        modalTitle.innerText = title;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden'; // Matikan scroll halaman
+    }
+
+    function closeCertModal() {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto'; // Aktifkan scroll kembali
+    }
+
+    // --- BAGIAN YANG DIPERBAIKI ---
+    // Tutup modal HANYA JIKA klik terjadi di luar kartu sertifikat putih
+    modal.addEventListener('click', function(e) {
+        // e.target adalah elemen yang diklik.
+        // e.currentTarget adalah elemen yang punya event listener (yaitu #certModal).
+        
+        // Logikanya: Jika elemen yang diklik ADALAH pembungkus gelapnya, baru close.
+        if (e.target === e.currentTarget) {
+            closeCertModal();
         }
-
-        function closeCertModal() {
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-            document.body.style.overflow = 'auto'; // Aktifkan scroll kembali
-        }
-
-        // Tutup modal jika area luar gambar diklik
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) closeCertModal();
-        });
+    });
     </script>
 </main>
