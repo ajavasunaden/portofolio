@@ -145,60 +145,34 @@
     </section>
 
     <section id="certificates" class="max-w-5xl mx-auto px-8 pb-32">
-        <div class="mb-16">
-            <p class="text-brand-accent font-bold tracking-[0.3em] uppercase text-[10px] mb-4">Recognition</p>
-            <h2 class="text-3xl font-brand font-extrabold text-brand-text uppercase tracking-tighter">Sertifikasi <span class="text-brand-accent">&</span> Penghargaan.</h2>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="group cursor-pointer" onclick="openCertModal('img/cert1.jpg', 'Adobe Certified Professional')">
-                <div class="relative aspect-video bg-stone-200 rounded-3xl overflow-hidden mb-6 border border-stone-100 transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
-                    <img src="/sertifikat/sertifikat-canva.jpg" alt="Adobe Certificate" class="w-full h-full object-cover">
-                </div>
-                <div class="px-2">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="w-2 h-2 rounded-full bg-brand-accent"></span>
-                        <span class="text-[9px] font-bold uppercase tracking-widest text-brand-muted">Adobe Inc.</span>
-                    </div>
-                    <h3 class="font-bold text-sm uppercase tracking-tight">Adobe Certified Professional</h3>
-                </div>
+    <div class="mb-16">
+        <p class="text-brand-accent font-bold tracking-[0.3em] uppercase text-[10px] mb-4">Recognition</p>
+        <h2 class="text-3xl font-brand font-extrabold text-brand-text uppercase tracking-tighter">Sertifikasi <span class="text-brand-accent">&</span> Penghargaan.</h2>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="group cursor-pointer" onclick="openCertModal('img/cert1.jpg', 'Adobe Certified Professional')">
+            <div class="relative aspect-video bg-stone-200 rounded-3xl overflow-hidden mb-6 border border-stone-100 transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                <img src="img/cert1.jpg" alt="Adobe Certificate" class="w-full h-full object-cover">
             </div>
-
-            <div class="group cursor-pointer" onclick="openCertModal('img/cert2.jpg', 'Google UX Design Specialization')">
-                <div class="relative aspect-video bg-stone-200 rounded-3xl overflow-hidden mb-6 border border-stone-100 transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
-                    <img src="img/cert2.jpg" alt="Google UX" class="w-full h-full object-cover">
+            <div class="px-2">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="w-2 h-2 rounded-full bg-brand-accent"></span>
+                    <span class="text-[9px] font-bold uppercase tracking-widest text-brand-muted">Adobe Inc.</span>
                 </div>
-                <div class="px-2">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="w-2 h-2 rounded-full bg-brand-accent"></span>
-                        <span class="text-[9px] font-bold uppercase tracking-widest text-brand-muted">Google / Coursera</span>
-                    </div>
-                    <h3 class="font-bold text-sm uppercase tracking-tight">UX Design Specialization</h3>
-                </div>
-            </div>
-
-            <div class="group cursor-pointer" onclick="openCertModal('img/cert3.jpg', 'Graphic Design Masterclass')">
-                <div class="relative aspect-video bg-stone-200 rounded-3xl overflow-hidden mb-6 border border-stone-100 transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
-                    <img src="img/cert3.jpg" alt="Udemy Masterclass" class="w-full h-full object-cover">
-                </div>
-                <div class="px-2">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="w-2 h-2 rounded-full bg-brand-accent"></span>
-                        <span class="text-[9px] font-bold uppercase tracking-widest text-brand-muted">Udemy Academy</span>
-                    </div>
-                    <h3 class="font-bold text-sm uppercase tracking-tight">Design Masterclass</h3>
-                </div>
+                <h3 class="font-bold text-sm uppercase tracking-tight">Adobe Certified Professional</h3>
             </div>
         </div>
-    </section>
+        </div>
+</section>
 
-<div id="certModal" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 bg-stone-900/95 backdrop-blur-md cursor-pointer">
+<div id="certModal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-stone-900/95 backdrop-blur-md cursor-pointer" onclick="checkClose(event)">
     
-    <button onclick="closeCertModal()" class="absolute top-8 right-8 text-white text-4xl hover:text-brand-accent transition-all z-[70]">&times;</button>
+    <button class="absolute top-8 right-8 text-white text-4xl hover:text-brand-accent transition-all">&times;</button>
     
-    <div class="max-w-4xl w-full flex flex-col items-center cursor-default">
-        <img id="modalImg" src="" alt="Full Certificate" class="max-w-full max-h-[80vh] rounded-xl shadow-2xl border border-white/10">
-        <h3 id="modalTitle" class="text-white text-center mt-8 text-xl font-brand font-extrabold uppercase tracking-widest pointer-events-none"></h3>
+    <div class="max-w-4xl w-full p-6 flex flex-col items-center cursor-default" id="modalContent">
+        <img id="modalImg" src="" alt="Full Certificate" class="max-w-full max-h-[80vh] rounded-xl shadow-2xl border border-white/10" onclick="event.stopPropagation()">
+        <h3 id="modalTitle" class="text-white text-center mt-8 text-xl font-brand font-extrabold uppercase tracking-widest"></h3>
     </div>
 </div>
 
@@ -221,20 +195,18 @@
         document.body.style.overflow = 'auto';
     }
 
-    // Perbaikan Logika Klik
-    modal.addEventListener('click', function(e) {
-        // Jika yang diklik adalah background (certModal) 
-        // atau elemen lain yang BUKAN bagian dari gambar/teks di dalamnya
+    // Fungsi khusus untuk mengecek area klik
+    function checkClose(e) {
+        const content = document.getElementById('modalContent');
+        // Jika yang diklik adalah background hitam (bukan area gambar/teks)
         if (e.target === modal) {
             closeCertModal();
         }
-    });
+    }
 
-    // Tambahan: Tekan tombol ESC di keyboard untuk tutup (biar makin pro)
+    // Tambahan tombol Escape
     document.addEventListener('keydown', function(e) {
-        if (e.key === "Escape") {
-            closeCertModal();
-        }
+        if (e.key === "Escape") closeCertModal();
     });
 </script>
 </main>
