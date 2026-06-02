@@ -40,7 +40,7 @@
 </head>
 <body class="font-sans antialiased">
 
-    <!-- Navbar (Sama dengan Halaman Utama) -->
+    <!-- Navbar -->
     <nav class="fixed w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-stone-100">
         <div class="max-w-6xl mx-auto px-6">
             <div class="flex justify-between h-20 items-center">
@@ -90,21 +90,16 @@
                 <!-- Project 1: Biru Bouquet (UMKM) -->
                 <div class="portfolio-card group bg-white rounded-[2.5rem] overflow-hidden border border-stone-100 shadow-sm hover:shadow-xl flex flex-col justify-between" data-category="umkm">
                     <div>
-                        <div class="relative aspect-video w-full bg-stone-100 p-6 flex flex-col justify-between overflow-hidden">
-                            <div class="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-10" style="background-image: url('https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=600&auto=format&fit=crop');"></div>
+                        <!-- TANDA KUNING: Sekarang fokus gambar dengan tulisan soft overlay -->
+                        <div class="relative aspect-video w-full overflow-hidden bg-stone-200 shrink-0">
+                            <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=600&auto=format&fit=crop" 
+                                 alt="Biru Bouquet" 
+                                 class="object-cover h-full w-full grayscale group-hover:grayscale-0 transition duration-500 group-hover:scale-105">
                             
-                            <div class="flex items-center justify-between z-10">
-                                <span class="px-3 py-1 rounded-full text-[9px] font-bold bg-stone-900 text-white uppercase tracking-wider">Florist Store</span>
-                            </div>
-
-                            <div class="flex flex-col items-center justify-center my-4 z-10 transition-transform duration-500 group-hover:scale-105">
-                                <i class="fa-solid fa-seedling text-4xl text-brand-accent drop-shadow-sm"></i>
-                                <span class="text-sm font-brand font-extrabold text-brand-text mt-2 uppercase tracking-tight">Biru Bouquet</span>
-                            </div>
-
-                            <div class="flex justify-between items-center z-10 text-[9px] font-bold text-brand-muted uppercase tracking-wider">
-                                <span>Modern Commerce</span>
-                                <span>Tailwind CSS</span>
+                            <!-- Soft text overlay di atas gambar -->
+                            <div class="absolute inset-x-4 bottom-4 bg-white/70 backdrop-blur-md py-2.5 px-4 rounded-2xl border border-white/40 shadow-sm flex items-center justify-between">
+                                <span class="font-brand font-extrabold text-xs text-brand-text uppercase tracking-tight">Biru Bouquet</span>
+                                <span class="text-[8px] font-bold tracking-wider uppercase text-brand-muted bg-stone-100 px-2 py-0.5 rounded-md">Florist</span>
                             </div>
                         </div>
 
@@ -122,8 +117,9 @@
 
                     <div class="p-8 pt-0 mt-auto flex items-center justify-between">
                         <span class="text-[10px] font-bold text-brand-accent uppercase tracking-widest">Live Preview</span>
-                        <a href="https://birubouquet.vercel.app/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-brand-text text-white text-xs font-bold hover:bg-brand-accent transition-all flex items-center gap-2">
-                            Kunjungi Situs <i class="fa-solid fa-square-arrow-up-right text-[10px]"></i>
+                        <!-- TANDA HIJAU: Diubah menjadi outline soft -->
+                        <a href="https://birubouquet.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-stone-200 rounded-xl hover:border-brand-accent hover:bg-stone-50 transition-all duration-300 text-xs font-bold uppercase tracking-wider text-brand-text hover:text-brand-accent">
+                            Kunjungi Situs <i class="fa-solid fa-square-arrow-up-right text-[10px] text-stone-400 group-hover:text-brand-accent"></i>
                         </a>
                     </div>
                 </div>
@@ -131,21 +127,16 @@
                 <!-- Project 2: Contoh Porto (UMKM) -->
                 <div class="portfolio-card group bg-white rounded-[2.5rem] overflow-hidden border border-stone-100 shadow-sm hover:shadow-xl flex flex-col justify-between" data-category="umkm">
                     <div>
-                        <div class="relative aspect-video w-full bg-stone-100 p-6 flex flex-col justify-between overflow-hidden">
-                            <div class="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-10" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop');"></div>
+                        <!-- TANDA KUNING: Sekarang fokus gambar dengan tulisan soft overlay -->
+                        <div class="relative aspect-video w-full overflow-hidden bg-stone-200 shrink-0">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop" 
+                                 alt="Contoh Porto" 
+                                 class="object-cover h-full w-full grayscale group-hover:grayscale-0 transition duration-500 group-hover:scale-105">
                             
-                            <div class="flex items-center justify-between z-10">
-                                <span class="px-3 py-1 rounded-full text-[9px] font-bold bg-stone-900 text-white uppercase tracking-wider">Multi Grid Portfolio</span>
-                            </div>
-
-                            <div class="flex flex-col items-center justify-center my-4 z-10 transition-transform duration-500 group-hover:scale-105">
-                                <i class="fa-solid fa-shapes text-4xl text-brand-accent drop-shadow-sm"></i>
-                                <span class="text-sm font-brand font-extrabold text-brand-text mt-2 uppercase tracking-tight">Contoh Porto</span>
-                            </div>
-
-                            <div class="flex justify-between items-center z-10 text-[9px] font-bold text-brand-muted uppercase tracking-wider">
-                                <span>Business Showcase</span>
-                                <span>Grid Layout</span>
+                            <!-- Soft text overlay di atas gambar -->
+                            <div class="absolute inset-x-4 bottom-4 bg-white/70 backdrop-blur-md py-2.5 px-4 rounded-2xl border border-white/40 shadow-sm flex items-center justify-between">
+                                <span class="font-brand font-extrabold text-xs text-brand-text uppercase tracking-tight">Contoh Porto</span>
+                                <span class="text-[8px] font-bold tracking-wider uppercase text-brand-muted bg-stone-100 px-2 py-0.5 rounded-md">Showcase</span>
                             </div>
                         </div>
 
@@ -163,8 +154,9 @@
 
                     <div class="p-8 pt-0 mt-auto flex items-center justify-between">
                         <span class="text-[10px] font-bold text-brand-accent uppercase tracking-widest">Live Preview</span>
-                        <a href="https://ajavasunaden.github.io/contoh_porto/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-brand-text text-white text-xs font-bold hover:bg-brand-accent transition-all flex items-center gap-2">
-                            Kunjungi Situs <i class="fa-solid fa-square-arrow-up-right text-[10px]"></i>
+                        <!-- TANDA HIJAU: Diubah menjadi outline soft -->
+                        <a href="https://ajavasunaden.github.io/contoh_porto/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-stone-200 rounded-xl hover:border-brand-accent hover:bg-stone-50 transition-all duration-300 text-xs font-bold uppercase tracking-wider text-brand-text hover:text-brand-accent">
+                            Kunjungi Situs <i class="fa-solid fa-square-arrow-up-right text-[10px] text-stone-400 group-hover:text-brand-accent"></i>
                         </a>
                     </div>
                 </div>
@@ -172,21 +164,16 @@
                 <!-- Project 3: Personal Portfolio (Creative) -->
                 <div class="portfolio-card group bg-white rounded-[2.5rem] overflow-hidden border border-stone-100 shadow-sm hover:shadow-xl flex flex-col justify-between" data-category="creative">
                     <div>
-                        <div class="relative aspect-video w-full bg-stone-100 p-6 flex flex-col justify-between overflow-hidden">
-                            <div class="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-10" style="background-image: url('https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=600&auto=format&fit=crop');"></div>
+                        <!-- TANDA KUNING: Sekarang fokus gambar dengan tulisan soft overlay -->
+                        <div class="relative aspect-video w-full overflow-hidden bg-stone-200 shrink-0">
+                            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=600&auto=format&fit=crop" 
+                                 alt="Main Portfolio" 
+                                 class="object-cover h-full w-full grayscale group-hover:grayscale-0 transition duration-500 group-hover:scale-105">
                             
-                            <div class="flex items-center justify-between z-10">
-                                <span class="px-3 py-1 rounded-full text-[9px] font-bold bg-stone-900 text-white uppercase tracking-wider">Personal Showcase</span>
-                            </div>
-
-                            <div class="flex flex-col items-center justify-center my-4 z-10 transition-transform duration-500 group-hover:scale-105">
-                                <i class="fa-solid fa-user-tie text-4xl text-brand-accent drop-shadow-sm"></i>
-                                <span class="text-sm font-brand font-extrabold text-brand-text mt-2 uppercase tracking-tight">Main Portfolio</span>
-                            </div>
-
-                            <div class="flex justify-between items-center z-10 text-[9px] font-bold text-brand-muted uppercase tracking-wider">
-                                <span>Creative Developer</span>
-                                <span>GitHub Pages</span>
+                            <!-- Soft text overlay di atas gambar -->
+                            <div class="absolute inset-x-4 bottom-4 bg-white/70 backdrop-blur-md py-2.5 px-4 rounded-2xl border border-white/40 shadow-sm flex items-center justify-between">
+                                <span class="font-brand font-extrabold text-xs text-brand-text uppercase tracking-tight">Main Portfolio</span>
+                                <span class="text-[8px] font-bold tracking-wider uppercase text-brand-muted bg-stone-100 px-2 py-0.5 rounded-md">Personal</span>
                             </div>
                         </div>
 
@@ -204,8 +191,9 @@
 
                     <div class="p-8 pt-0 mt-auto flex items-center justify-between">
                         <span class="text-[10px] font-bold text-brand-accent uppercase tracking-widest">Live Preview</span>
-                        <a href="https://ajavasunaden.github.io/portofolio/index.html" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-brand-text text-white text-xs font-bold hover:bg-brand-accent transition-all flex items-center gap-2">
-                            Kunjungi Situs <i class="fa-solid fa-square-arrow-up-right text-[10px]"></i>
+                        <!-- TANDA HIJAU: Diubah menjadi outline soft -->
+                        <a href="https://ajavasunaden.github.io/portofolio/index.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-stone-200 rounded-xl hover:border-brand-accent hover:bg-stone-50 transition-all duration-300 text-xs font-bold uppercase tracking-wider text-brand-text hover:text-brand-accent">
+                            Kunjungi Situs <i class="fa-solid fa-square-arrow-up-right text-[10px] text-stone-400 group-hover:text-brand-accent"></i>
                         </a>
                     </div>
                 </div>
@@ -213,7 +201,7 @@
             </div>
         </section>
 
-        <!-- Services Section Sederhana -->
+        <!-- Services Section -->
         <section class="max-w-6xl mx-auto px-6 pt-32">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <p class="text-brand-accent font-bold tracking-[0.3em] uppercase text-[10px] mb-4">Layanan</p>
@@ -255,14 +243,14 @@
 
     </main>
 
-    <!-- Footer (Sama dengan Halaman Utama) -->
+    <!-- Footer -->
     <footer class="py-16 border-t border-stone-100 text-center">
         <p class="text-brand-muted text-[10px] font-bold tracking-widest uppercase">
             © 2026 JAVASUN ADEN ANCASIKU
         </p>
     </footer>
 
-    <!-- Script Sederhana untuk Filter Grid -->
+    <!-- Filter Grid Script -->
     <script>
         const filterBtns = document.querySelectorAll('.filter-btn');
         const portfolioCards = document.querySelectorAll('.portfolio-card');
