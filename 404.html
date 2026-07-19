@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waduh, 404! - javasunaden.web.id</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display for dramatic titles & Plus Jakarta Sans for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for cute icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FAF8F5; /* Warm cozy aesthetic cream */
+        }
+        .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Cute custom neo-brutalist shadows */
+        .brutal-shadow {
+            box-shadow: 6px 6px 0px 0px #000000;
+        }
+        .brutal-shadow-sm {
+            box-shadow: 3px 3px 0px 0px #000000;
+        }
+        .brutal-shadow-lg {
+            box-shadow: 12px 12px 0px 0px #000000;
+        }
+        .brutal-btn-hover:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 8px 8px 0px 0px #000000;
+        }
+        .brutal-btn-hover:active {
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0px 0px #000000;
+        }
+
+        /* Micro-interaction: Cute wiggle animation when clicking the image */
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(5deg); }
+        }
+        .wiggle-active {
+            animation: wiggle 0.4s ease-in-out;
+        }
+    </style>
+</head>
+<body class="h-full flex flex-col justify-between p-4 md:p-8 selection:bg-[#FF603E] selection:text-white">
+
+    <!-- Top Aesthetic Header -->
+    <header class="max-w-6xl w-full mx-auto flex items-center justify-between">
+        <!-- Diubah ke "/" agar selalu kembali ke domain utama dengan aman -->
+        <a href="/" class="text-sm font-bold tracking-wider text-black border-2 border-black bg-white px-3 py-1.5 rounded-full brutal-shadow-sm hover:translate-y-[-2px] transition-transform">
+            ⚡ javasunaden.web.id
+        </a>
+        <div class="hidden sm:flex items-center gap-1.5 text-xs text-zinc-600">
+            <span class="w-2 h-2 rounded-full bg-[#FF603E] animate-ping"></span>
+            <span>Status Kerja: Menangisi Link Rusak</span>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-4xl w-full mx-auto my-auto py-8 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
+        
+        <!-- Left: Static Polaroid Frame with Figma Vector Guidelines -->
+        <div class="relative shrink-0 cursor-pointer" id="polaroid-wrapper" onclick="triggerWiggle()">
+            <!-- Custom Vector Bounding Box Grid (Aesthetic Designer Guideline) -->
+            <div class="absolute -inset-4 border border-dashed border-[#7F56D9]/40 rounded-lg pointer-events-none"></div>
+            <div class="absolute -top-4 -left-4 w-2 h-2 bg-[#7F56D9] border border-white"></div>
+            <div class="absolute -top-4 -right-4 w-2 h-2 bg-[#7F56D9] border border-white"></div>
+            <div class="absolute -bottom-4 -left-4 w-2 h-2 bg-[#7F56D9] border border-white"></div>
+            <div class="absolute -bottom-4 -right-4 w-2 h-2 bg-[#7F56D9] border border-white"></div>
+
+            <!-- Fake Figma Mouse Pointer hovering over the image -->
+            <div class="absolute -top-2 -right-8 z-20 flex flex-col items-start pointer-events-none transform rotate-[-6deg]">
+                <div class="flex items-center gap-1 bg-[#FF603E] text-white text-[10px] font-bold px-2 py-0.5 rounded-md border-2 border-black shadow-sm">
+                    <i class="fa-solid fa-mouse-pointer text-[9px]"></i> java_sunaden
+                </div>
+            </div>
+
+            <!-- Polaroid Container -->
+            <div id="polaroid-frame" class="w-72 bg-white border-4 border-black p-4 rounded-lg brutal-shadow-lg transition-all duration-300 transform rotate-[-3deg] hover:rotate-[1deg] hover:-translate-y-1">
+                
+                <!-- Custom Photo Frame -->
+                <div class="aspect-square bg-zinc-100 border-2 border-black rounded overflow-hidden relative group">
+                    
+                    <!-- USER: Ganti URL image di src bawah ini dengan link foto aslimu yang sedang sedih! -->
+                    <img id="designer-photo" 
+                         src="https://placehold.co/400x400/ffe4e6/9f1239?text=Ganti+Foto+Sedihmu+Disini" 
+                         onerror="this.src='https://placehold.co/400x400/fecdd3/9f1239?text=😢+Foto+Sedih+Java'"
+                         alt="Java Sunaden Sedih" 
+                         class="w-full h-full object-cover transition-all duration-500 transform scale-100 group-hover:scale-105">
+
+                    <!-- Vector Guidelines Overlay on Hover -->
+                    <div class="absolute inset-0 bg-[#7F56D9]/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                        <span class="text-[10px] bg-white border border-black px-2 py-0.5 rounded font-mono text-black">Artboard_01 (400x400px)</span>
+                    </div>
+                </div>
+
+                <!-- Small Caption -->
+                <div class="mt-4 text-center">
+                    <p class="font-bold text-sm text-black uppercase tracking-wider font-mono">⚠️ link_rusak_final_v9.psd</p>
+                    <p class="text-[11px] text-zinc-500 mt-1 font-mono">Status: Missing // Click to Poke!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Bold Main Headline & Redirection -->
+        <div class="flex-1 text-center md:text-left space-y-6">
+            
+            <div class="space-y-3">
+                <!-- Tiny Label -->
+                <span class="inline-block bg-[#FEE4E2] border-2 border-[#FDA29B] text-[#B42318] px-3 py-1 rounded-full text-xs font-bold font-mono">
+                    <i class="fa-solid fa-triangle-exclamation"></i> ERROR_CODE: 404_NOT_FOUND
+                </span>
+                
+                <!-- Massive 404 Headline -->
+                <h1 class="text-8xl md:text-[10rem] font-extrabold tracking-tighter text-black leading-none select-none relative" style="letter-spacing: -0.05em;">
+                    404<span class="text-[#FF603E]">!</span>
+                </h1>
+                
+                <!-- Subheadline -->
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-black leading-tight">
+                    Halamannya <span class="serif-font italic font-normal text-[#FF603E]">Hilang Kemana,</span> Ya?
+                </h2>
+                
+                <!-- Description -->
+                <p class="text-sm md:text-base text-zinc-600 max-w-md leading-relaxed">
+                    Sama seperti inspirasi pas lagi mepet deadline, halaman yang kamu cari tiba-tiba lenyap tanpa jejak di canvas ini. Java sekarang lagi termenung sedih di pojokan studio menunggu revisi terbaru.
+                </p>
+            </div>
+
+            <!-- Redirection CTA Buttons -->
+            <!-- Mengubah tautan penuh menjadi path "/" dan "/#portfolio" agar pengerjaan internal antar-id navigasi GitHub Pages berjalan mulus -->
+            <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
+                <a href="/" class="w-full sm:w-auto text-center px-6 py-3 bg-[#FF603E] text-white font-bold border-2 border-black rounded-lg brutal-shadow brutal-btn-hover transition-all text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-house-chimney"></i> Kembali ke Beranda
+                </a>
+                <a href="/#portfolio" class="w-full sm:w-auto text-center px-6 py-3 bg-white text-black font-bold border-2 border-black rounded-lg brutal-shadow brutal-btn-hover transition-all text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-palette"></i> Lihat Portofolio Desain
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Copyright -->
+    <footer class="max-w-6xl w-full mx-auto text-center text-[11px] text-zinc-500 border-t border-zinc-200 pt-6 mt-8">
+        <p>&copy; 2026 Java Sunaden. Hak Cipta Dilindungi Hukum Karma Klien.</p>
+    </footer>
+
+    <!-- Simple click animation script -->
+    <script>
+        function triggerWiggle() {
+            const frame = document.getElementById('polaroid-frame');
+            
+            // Add the wiggle class
+            frame.classList.add('wiggle-active');
+            
+            // Remove the class after animation completes so it can be re-triggered
+            setTimeout(() => {
+                frame.classList.remove('wiggle-active');
+            }, 400);
+        }
+    </script>
+</body>
+</html>
