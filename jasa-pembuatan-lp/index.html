@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasa Pembuatan Landing Page Profesional & High Converting</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        },
+                        accent: {
+                            500: '#10b981',
+                            600: '#059669',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-grid-pattern {
+            background-image: radial-gradient(rgba(37, 99, 235, 0.1) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center font-black text-xl shadow-lg shadow-brand-500/30">
+                    C
+                </div>
+                <span class="text-xl font-bold text-slate-900 tracking-tight">Creativ<span class="text-brand-600">Page</span></span>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600">
+                <a href="#manfaat" class="hover:text-brand-600 transition">Manfaat</a>
+                <a href="#fitur" class="hover:text-brand-600 transition">Fitur</a>
+                <a href="#portofolio" class="hover:text-brand-600 transition">Portofolio</a>
+                <a href="#alur" class="hover:text-brand-600 transition">Alur Kerja</a>
+                <a href="#harga" class="hover:text-brand-600 transition">Harga</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="https://wa.me/6281222227920?text=Halo%20saya%20ingin%20konsultasi%20jasa%20landing%20page" target="_blank" class="px-5 py-2.5 rounded-full bg-accent-500 hover:bg-accent-600 text-white font-semibold text-sm flex items-center gap-2 transition shadow-md shadow-accent-500/20">
+                    <i class="fa-brands me-1 text-lg"></i> Konsultasi Gratis
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button id="menu-btn" class="md:hidden text-slate-700 text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3">
+            <a href="#manfaat" class="block text-slate-600 hover:text-brand-600">Manfaat</a>
+            <a href="#fitur" class="block text-slate-600 hover:text-brand-600">Fitur</a>
+            <a href="#portofolio" class="block text-slate-600 hover:text-brand-600">Portofolio</a>
+            <a href="#alur" class="block text-slate-600 hover:text-brand-600">Alur Kerja</a>
+            <a href="#harga" class="block text-slate-600 hover:text-brand-600">Harga</a>
+            <a href="https://wa.me/6281222227920" target="_blank" class="block text-center w-full py-3 rounded-xl bg-accent-500 text-white font-semibold">
+                Konsultasi WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden bg-grid-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-sm font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-brand-600 animate-ping"></span>
+                        Jasa Pembuatan Landing Page Profesional
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        Buat Landing Page dengan <span class="gradient-text">Konversi Maksimal</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Jualan lebih fokus, efisien, dan modern. Kami merancang landing page cepat, responsif, dan didesain khusus untuk mengubah pengunjung iklan Anda menjadi pembeli yang loyal.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                        <a href="#harga" class="px-8 py-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-lg text-center shadow-lg shadow-brand-600/30 transition transform hover:-translate-y-0.5">
+                            Lihat Paket & Harga
+                        </a>
+                        <a href="https://wa.me/6281222227920" target="_blank" class="px-8 py-4 rounded-xl bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 font-bold text-lg text-center flex items-center justify-center gap-2 shadow-sm transition">
+                            <i class="fa-brands text-green-500 text-xl"></i> Chat WhatsApp
+                        </a>
+                    </div>
+
+                    <!-- Trust Metrics -->
+                    <div class="pt-8 border-t border-slate-200/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">147+</div>
+                            <div class="text-xs sm:text-sm text-slate-500">Testimoni Puas</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">250+</div>
+                            <div class="text-xs sm:text-sm text-slate-500">Proyek Selesai</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">99.8%</div>
+                            <div class="text-xs sm:text-sm text-slate-500">Uptime Server</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic Banner / Mockup -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative bg-white rounded-2xl shadow-2xl p-4 border border-slate-100 transform lg:rotate-1 hover:rotate-0 transition duration-500">
+                        <!-- Browser Toolbar Mock -->
+                        <div class="flex items-center gap-2 pb-3 mb-3 border-b border-slate-100">
+                            <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                            <div class="ml-2 text-xs text-slate-400 font-mono bg-slate-50 px-3 py-1 rounded-md flex-1 overflow-hidden truncate">https://produk-anda.com</div>
+                        </div>
+                        <!-- Hero Preview Image -->
+                        <img src="https://placehold.co/800x600/2563eb/ffffff?text=Preview+Landing+Page+Interaktif" alt="Preview Landing Page" class="rounded-lg w-full h-auto object-cover shadow-inner">
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-slate-100 flex items-center gap-3 hidden sm:flex">
+                            <div class="w-12 h-12 rounded-full bg-accent-500/10 text-accent-500 flex items-center justify-center font-bold text-xl">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm font-bold text-slate-900">+40% Konversi</div>
+                                <div class="text-xs text-slate-500">Rata-rata peningkatan omset</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Edukasi & Manfaat (3 Pilar Utama) -->
+    <section id="manfaat" class="py-20 bg-white border-y border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-brand-600 mb-2">Memahami Landing Page</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900">Mengapa Bisnis Anda Wajib Memilikinya?</p>
+                <p class="mt-4 text-slate-600"> Landing page dirancang khusus untuk membawa audiens mengambil aksi tanpa gangguan navigasi lain.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-600 text-white flex items-center justify-center font-bold text-2xl mb-6 shadow-md shadow-brand-500/30 group-hover:scale-110 transition transform">
+                        01
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Apa itu Landing Page?</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Halaman khusus yang didesain secara tertarget untuk satu fokus tujuan: mempromosikan produk/jasa tertentu dan mengarahkan pengunjung menuju aksi (membeli, mendaftar, atau kontak WA).
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-600 text-white flex items-center justify-center font-bold text-2xl mb-6 shadow-md shadow-brand-500/30 group-hover:scale-110 transition transform">
+                        02
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Manfaat Konversi</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Meningkatkan konversi hingga 40% dibandingkan website biasa. Kecepatan tinggi, pesan hard-selling yang tepat sasaran, serta kemudahan pelacakan analytics iklan digital.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-600 text-white flex items-center justify-center font-bold text-2xl mb-6 shadow-md shadow-brand-500/30 group-hover:scale-110 transition transform">
+                        03
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Wajib di Era Digital</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Di era serba cepat, calon pembeli butuh informasi instan tanpa ribet. Landing page memberikan kemudahan bertransaksi 24 jam penuh untuk calon pembeli Anda.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Integrasi Plugin & Fitur Unggulan -->
+    <section id="fitur" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-brand-500 mb-2">Fitur & Ekosistem Terbaik</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white">Dilengkapi Fitur Berkualitas Tinggi</p>
+                <p class="mt-4 text-slate-400">Setiap paket kami sertakan alat pendukung konversi tanpa biaya tambahan tersembunyi.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/60 hover:border-brand-500 transition">
+                    <div class="w-12 h-12 rounded-xl bg-green-500/10 text-green-400 flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">WhatsApp Order Button</h4>
+                    <p class="text-slate-400 text-sm">Integrasi tombol klik langsung mengarah ke chat WhatsApp CS Anda lengkap dengan format pesan otomatis.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/60 hover:border-brand-500 transition">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Google Analytics & Pixel</h4>
+                    <p class="text-slate-400 text-sm">Pemasangan pelacakan akurat untuk Google Ads, Meta Ads (Facebook/Instagram), dan TikTok Ads.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/60 hover:border-brand-500 transition">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-cubes"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Elementor Pro / Premium Builder</h4>
+                    <p class="text-slate-400 text-sm">Memudahkan proses penataan layout visual secara fleksibel, menarik, & mudah diubah di kemudian hari.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/60 hover:border-brand-500 transition">
+                    <div class="w-12 h-12 rounded-xl bg-yellow-500/10 text-yellow-400 flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Fast Speed Loading</h4>
+                    <p class="text-slate-400 text-sm">Optimasi gambar dan script agar halaman terbuka kurang dari 3 detik untuk mencegah pembeli kabur.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/60 hover:border-brand-500 transition">
+                    <div class="w-12 h-12 rounded-xl bg-pink-500/10 text-pink-400 flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">100% Mobile Responsive</h4>
+                    <p class="text-slate-400 text-sm">Tampilan otomatis menyesuaikan layar smartphone, tablet, maupun komputer desktop.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/60 hover:border-brand-500 transition">
+                    <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Gratis SSL Certificate</h4>
+                    <p class="text-slate-400 text-sm">Keamanan data terjamin dengan HTTPS green lock yang meningkatkan kepercayaan calon pelanggan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Portofolio Interaktif -->
+    <section id="portofolio" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-brand-600 mb-2">Hasil Karya Kami</h2>
+                    <p class="text-3xl font-extrabold text-slate-900">Portofolio Landing Page</p>
+                </div>
+                <!-- Filter Buttons -->
+                <div class="mt-4 md:mt-0 flex flex-wrap gap-2" id="portfolio-filters">
+                    <button class="filter-btn px-4 py-2 rounded-lg bg-brand-600 text-white font-medium text-sm transition" data-filter="all">Semua</button>
+                    <button class="filter-btn px-4 py-2 rounded-lg bg-white text-slate-600 hover:bg-slate-200 font-medium text-sm transition" data-filter="kuliner">Kuliner</button>
+                    <button class="filter-btn px-4 py-2 rounded-lg bg-white text-slate-600 hover:bg-slate-200 font-medium text-sm transition" data-filter="jasainstansi">Jasa & Klinik</button>
+                    <button class="filter-btn px-4 py-2 rounded-lg bg-white text-slate-600 hover:bg-slate-200 font-medium text-sm transition" data-filter="ecommerce">E-Commerce</button>
+                </div>
+            </div>
+
+            <!-- Portfolio Cards Grid -->
+            <div class="grid md:grid-cols-3 gap-8" id="portfolio-grid">
+                <!-- Item 1 -->
+                <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition border border-slate-200/80" data-category="kuliner">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://placehold.co/600x400/e2e8f0/1e293b?text=Kopi+Nusantara" alt="Kopi Nusantara" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-4 py-2 rounded-full bg-white text-slate-900 font-bold text-sm">Lihat Preview</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-orange-100 text-orange-700">Kuliner & Roastery</span>
+                        <h4 class="text-lg font-bold text-slate-900 mt-3">Kopi Nusantara</h4>
+                        <p class="text-slate-500 text-sm mt-1">Landing page promosi biji kopi & franchise kedai kopi.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition border border-slate-200/80" data-category="jasainstansi">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://placehold.co/600x400/e2e8f0/1e293b?text=Klinik+Senyum+Sehat" alt="Klinik Senyum Sehat" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-4 py-2 rounded-full bg-white text-slate-900 font-bold text-sm">Lihat Preview</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-teal-100 text-teal-700">Kesehatan / Klinik</span>
+                        <h4 class="text-lg font-bold text-slate-900 mt-3">Klinik Senyum Sehat</h4>
+                        <p class="text-slate-500 text-sm mt-1">Sistem reservasi dokter gigi berbasis form WhatsApp.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition border border-slate-200/80" data-category="ecommerce">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://placehold.co/600x400/e2e8f0/1e293b?text=Glow+Botanica+Skincare" alt="Glow Botanica Skincare" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-4 py-2 rounded-full bg-white text-slate-900 font-bold text-sm">Lihat Preview</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-pink-100 text-pink-700">Beauty & Skincare</span>
+                        <h4 class="text-lg font-bold text-slate-900 mt-3">Glow Botanica</h4>
+                        <p class="text-slate-500 text-sm mt-1">Landing page promo khusus diskon bundel produk kecantikan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: 5 Tahapan Alur Kerja -->
+    <section id="alur" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-brand-600 mb-2">Proses Pengerjaan Terstruktur</h2>
+                <p class="text-3xl font-extrabold text-slate-900">5 Langkah Mudah Memiliki Landing Page</p>
+            </div>
+
+            <div class="grid md:grid-cols-5 gap-6 text-center">
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-100">
+                    <div class="w-10 h-10 rounded-full bg-brand-100 text-brand-600 font-bold flex items-center justify-center mx-auto mb-4">1</div>
+                    <h4 class="font-bold text-slate-900 mb-1">Briefing & Materi</h4>
+                    <p class="text-xs text-slate-500">Pengumpulan foto produk, copywriting awal, & promo bisnis Anda.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-100">
+                    <div class="w-10 h-10 rounded-full bg-brand-100 text-brand-600 font-bold flex items-center justify-center mx-auto mb-4">2</div>
+                    <h4 class="font-bold text-slate-900 mb-1">Wireframe</h4>
+                    <p class="text-xs text-slate-500">Penyusunan hierarki pesan agar pembeli nyaman membaca.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-100">
+                    <div class="w-10 h-10 rounded-full bg-brand-100 text-brand-600 font-bold flex items-center justify-center mx-auto mb-4">3</div>
+                    <h4 class="font-bold text-slate-900 mb-1">Desain Visual</h4>
+                    <p class="text-xs text-slate-500">Proses desain tampilan modern yang selaras dengan warna brand.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-100">
+                    <div class="w-10 h-10 rounded-full bg-brand-100 text-brand-600 font-bold flex items-center justify-center mx-auto mb-4">4</div>
+                    <h4 class="font-bold text-slate-900 mb-1">Development</h4>
+                    <p class="text-xs text-slate-500">Koding/pembangunan halaman, koneksi domain, & optimasi responsif.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-50 border border-slate-100">
+                    <div class="w-10 h-10 rounded-full bg-brand-100 text-brand-600 font-bold flex items-center justify-center mx-auto mb-4">5</div>
+                    <h4 class="font-bold text-slate-900 mb-1">Revisi & Launch</h4>
+                    <p class="text-xs text-slate-500">Pemeriksaan akhir, revisi minor jika ada, dan halaman siap tayang!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Price List & Paket Layanan -->
+    <section id="harga" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-brand-600 mb-2">Transparan & Terjangkau</h2>
+                <p class="text-3xl font-extrabold text-slate-900">Pilihan Paket Jasa Landing Page</p>
+                <p class="text-slate-600 mt-2">Harga sudah termasuk Domain & Hosting tahun pertama.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+                <!-- Paket Bronze -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 flex flex-col justify-between shadow-sm hover:shadow-lg transition">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-700 font-bold text-xs uppercase">Bronze</span>
+                            <span class="text-xs text-slate-400">Paling Hemat</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900">Landing Page Statis</h3>
+                        <p class="text-slate-500 text-sm mt-1">Cocok untuk promosi produk tunggal sederhana.</p>
+                        
+                        <div class="my-6">
+                            <span class="text-4xl font-extrabold text-slate-900">Rp450.000</span>
+                            <span class="text-xs text-slate-400 block mt-1">Perpanjangan Rp250rb/tahun</span>
+                        </div>
+
+                        <ul class="space-y-3 text-sm text-slate-600 mb-8">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accent-500"></i> 1 Halaman Desain Custom (HTML/JS)</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accent-500"></i> Gratis Domain .my.id & Hosting</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accent-500"></i> Tombol Order Klik WhatsApp</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accent-500"></i> Mobile Friendly Responsive</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accent-500"></i> Waktu Pengerjaan 2 - 5 Hari</li>
+                            <li class="flex items-center gap-3 text-slate-400 line-through"><i class="fa-solid fa-xmark text-slate-300"></i> Akses Admin Panel WordPress</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6281222227920?text=Halo%20saya%20tertarik%20paket%20Bronze" target="_blank" class="w-full py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-center block transition">Pesan Paket Bronze</a>
+                </div>
+
+                <!-- Paket Silver (Best Value) -->
+                <div class="bg-white rounded-3xl p-8 border-2 border-brand-600 flex flex-col justify-between shadow-xl relative scale-105 z-10">
+                    <div class="absolute -top-4 right-8 bg-brand-600 text-white font-bold text-xs uppercase px-4 py-1.5 rounded-full shadow-md">Paling Populer</div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 font-bold text-xs uppercase">Silver</span>
+                            <span class="text-xs text-brand-600 font-semibold">Rekomendasi Utama</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900">Shared WordPress</h3>
+                        <p class="text-slate-500 text-sm mt-1">Fleksibel dengan sistem CMS WordPress modern.</p>
+                        
+                        <div class="my-6">
+                            <span class="text-4xl font-extrabold text-slate-900">Rp1.300.000</span>
+                            <span class="text-xs text-slate-400 block mt-1">Perpanjangan Rp550rb/tahun</span>
+                        </div>
+
+                        <ul class="space-y-3 text-sm text-slate-600 mb-8">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accent-500"></i> 1 Halaman WordPress Elementor</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accent-500"></i> Gratis Domain .com & Shared Hosting</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accent-500"></i> Akses Full Admin Panel</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accent-500"></i> Integrasi Meta Pixel & Google Analytics</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accent-500"></i> Jatah Revisi 2x</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accent-500"></i> Waktu Pengerjaan 5 - 7 Hari</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6281222227920?text=Halo%20saya%20tertarik%20paket%20Silver" target="_blank" class="w-full py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-center block shadow-lg shadow-brand-600/30 transition">Pesan Paket Silver</a>
+                </div>
+
+                <!-- Paket Gold -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 flex flex-col justify-between shadow-sm hover:shadow-lg transition">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 font-bold text-xs uppercase">Gold</span>
+                            <span class="text-xs text-slate-400">Performa Tinggi</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900">Private Server (VPS)</h3>
+                        <p class="text-slate-500 text-sm mt-1">Performa super cepat khusus iklan traffic besar.</p>
+                        
+                        <div class="my-6">
+                            <span class="text-4xl font-extrabold text-slate-900">Rp1.900.000</span>
+                            <span class="text-xs text-slate-400 block mt-1">Perpanjangan Rp850rb/tahun</span>
+                        </div>
+
+                        <ul class="space-y-3 text-sm text-slate-600 mb-8">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accent-500"></i> Private Cloud Server / Hosting Super Cepat</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accent-500"></i> Gratis Elementor Pro License</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accent-500"></i> Domain .com Bebas Pilih</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accent-500"></i> Email Bisnis Profesional (@namadomain.com)</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accent-500"></i> Garansi Pendampingan Maintenance 1 Bulan</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6281222227920?text=Halo%20saya%20tertarik%20paket%20Gold" target="_blank" class="w-full py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-center block transition">Pesan Paket Gold</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Cost Estimator Calculator -->
+    <section class="py-16 bg-white border-t border-slate-200/80">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="bg-gradient-to-r from-brand-900 to-brand-700 rounded-3xl p-8 sm:p-12 text-white shadow-2xl">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-bold">Kalkulator Estimasi Biaya Instant</h3>
+                    <p class="text-brand-100 text-sm mt-2">Hitung perkiraan kebutuhan landing page Anda secara fleksibel.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center bg-white/10 p-6 rounded-2xl backdrop-blur-sm">
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-brand-100 uppercase mb-2">Pilih Jenis Paket Base</label>
+                            <select id="calc-package" class="w-full bg-slate-900/80 text-white rounded-xl px-4 py-3 border border-slate-600 focus:outline-none focus:border-brand-400 text-sm">
+                                <option value="450000">Paket Bronze - Rp 450.000</option>
+                                <option value="1300000" selected>Paket Silver - Rp 1.300.000</option>
+                                <option value="1900000">Paket Gold - Rp 1.900.000</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-brand-100 uppercase mb-2">Layanan Add-On Tambahan</label>
+                            <div class="space-y-2 text-sm">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="addon-copywriting" class="rounded text-brand-600 focus:ring-0" value="200000" onchange="calculateTotal()">
+                                    <span>Jasa Copywriting Hard-Selling (+Rp200k)</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="addon-express" class="rounded text-brand-600 focus:ring-0" value="250000" onchange="calculateTotal()">
+                                    <span>Pengerjaan Express 24 Jam (+Rp250k)</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center md:text-right border-t md:border-t-0 md:border-l border-white/20 pt-6 md:pt-0 md:pl-8">
+                        <div class="text-xs uppercase text-brand-200 tracking-wider">Total Estimasi Biaya</div>
+                        <div id="calc-total" class="text-4xl font-extrabold text-white my-2">Rp1.300.000</div>
+                        <a id="calc-wa-btn" href="https://wa.me/6281222227920?text=Halo,%20estimasi%20paket%20saya%20Rp1.300.000" target="_blank" class="inline-block mt-4 px-6 py-3 rounded-xl bg-accent-500 hover:bg-accent-600 text-white font-bold text-sm shadow-md transition">
+                            Pesan Dengan Estimasi Ini
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900">Pertanyaan Yang Sering Diajukan (FAQ)</h2>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-white rounded-xl p-6 border border-slate-200/80 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-slate-900">
+                        <span>Berapa lama proses pembuatan landing page?</span>
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+                        Pengerjaan standar memakan waktu 2 hingga 7 hari kerja bergantung pada kelengkapan materi (foto produk, penawaran, & deskripsi) dari pihak calon klien.
+                    </p>
+                </details>
+
+                <details class="group bg-white rounded-xl p-6 border border-slate-200/80 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-slate-900">
+                        <span>Apakah saya mendapatkan akses login ke website saya?</span>
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+                        Ya, untuk Paket Silver & Gold Anda akan mendapatkan akses penuh (Admin Credentials) ke dashboard WordPress sehingga Anda bisa mengubah tulisan atau foto sendiri kapan saja.
+                    </p>
+                </details>
+
+                <details class="group bg-white rounded-xl p-6 border border-slate-200/80 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-slate-900">
+                        <span>Bagaimana jika belum memiliki materi copywriting atau gambar?</span>
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+                        Jangan khawatir! Tim CreativPage siap membantu menyusunkan alur tulisan (copywriting) dan mencarikan gambar ilustrasi berkualitas tinggi yang sesuai dengan produk/jasa Anda.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
+            <div class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center font-bold text-lg">C</div>
+                    <span class="text-xl font-bold text-white">Creativ<span class="text-brand-500">Page</span></span>
+                </div>
+                <p class="text-sm">Solusi pembuatan landing page berkonversi tinggi untuk UMKM, UKM, & pebisnis digital Indonesia.</p>
+            </div>
+            <div>
+                <h5 class="text-white font-bold mb-4">Layanan</h5>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white transition">Landing Page UMKM</a></li>
+                    <li><a href="#" class="hover:text-white transition">Website Custom WordPress</a></li>
+                    <li><a href="#" class="hover:text-white transition">Optimasi Speed Website</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-bold mb-4">Kontak Kami</h5>
+                <ul class="space-y-2 text-sm">
+                    <li><i class="fa-brands fa-whatsapp me-2"></i> +62 812 2222 7920</li>
+                    <li><i class="fa-solid fa-envelope me-2"></i> support@creativpage.id</li>
+                    <li><i class="fa-solid fa-location-dot me-2"></i> Yogyakarta, Indonesia</li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-bold mb-4">Ikuti Kami</h5>
+                <div class="flex gap-4 text-lg">
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-brand-600 text-white flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-brand-600 text-white flex items-center justify-center transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-brand-600 text-white flex items-center justify-center transition"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-slate-800 text-center text-xs">
+            &copy; 2026 CreativPage. All rights reserved. Jasa Pembuatan Landing Page Profesional.
+        </div>
+    </footer>
+
+    <!-- Interactive Logic Script -->
+    <script>
+        // Mobile Navigation Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Portfolio Category Filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-brand-600', 'text-white');
+                    b.classList.add('bg-white', 'text-slate-600');
+                });
+                // Add active class to clicked button
+                btn.classList.add('bg-brand-600', 'text-white');
+                btn.classList.remove('bg-white', 'text-slate-600');
+
+                const filter = btn.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Interactive Cost Calculator
+        const packageSelect = document.getElementById('calc-package');
+        const addonCopywriting = document.getElementById('addon-copywriting');
+        const addonExpress = document.getElementById('addon-express');
+        const totalDisplay = document.getElementById('calc-total');
+        const waBtn = document.getElementById('calc-wa-btn');
+
+        function calculateTotal() {
+            let base = parseInt(packageSelect.value);
+            let total = base;
+
+            if (addonCopywriting.checked) total += parseInt(addonCopywriting.value);
+            if (addonExpress.checked) total += parseInt(addonExpress.value);
+
+            const formatted = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(total);
+            totalDisplay.innerText = formatted;
+
+            const waText = encodeURIComponent(`Halo, saya berminat membuat landing page dengan estimasi total: ${formatted}`);
+            waBtn.href = `https://wa.me/6281222227920?text=${waText}`;
+        }
+
+        packageSelect.addEventListener('change', calculateTotal);
+    </script>
+</body>
+</html>
